@@ -2788,7 +2788,7 @@
                 <h2>Admin Dashboard</h2>
                 <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
                     <span id="fbStatusBadge" class="fb-status ok">● Firebase Connected</span>
-                    <button class="btn btn-g" id="ghPushHeaderBtn" onclick="pushToGitHub(true)" style="display: inline-flex;" disabled="">⏳ Pushing...</button>
+                    <button class="btn btn-g" id="ghPushHeaderBtn" onclick="pushToGitHub(true)" style="display: inline-flex; background: var(--accent); color: var(--bg);" disabled="">✓ Live!</button>
                     <button class="btn btn-o" onclick="goHome()">← View Site</button>
                     <button class="btn btn-o" onclick="doLogout()">Logout</button>
                 </div>
@@ -2957,24 +2957,6 @@
         <div class="ai-actions">
           <button class="ico-btn" onclick="editItem('cert','c9')">Edit</button>
           <button class="ico-btn del" onclick="delItem('certs','c9','aCertList','cert')">Del</button>
-        </div>
-      </div>
-    </div>
-    <div class="admin-item">
-      <div class="ai-header">
-        <div style="display:flex;align-items:center"><span style="display:contents"><span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:4px;border:1px solid #6366f144;background:#6366f111;font-family:var(--mono);font-size:.5rem;font-weight:700;color:#6366f1;flex-shrink:0;margin-right:.5rem">TCM</span></span><div><div class="ai-title">Linux 100: Fundamentals</div><div class="ai-meta">TCM Security</div></div></div>
-        <div class="ai-actions">
-          <button class="ico-btn" onclick="editItem('cert','c11')">Edit</button>
-          <button class="ico-btn del" onclick="delItem('certs','c11','aCertList','cert')">Del</button>
-        </div>
-      </div>
-    </div>
-    <div class="admin-item">
-      <div class="ai-header">
-        <div style="display:flex;align-items:center"><span style="display:contents"><span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:4px;border:1px solid #a1620744;background:#a1620711;font-family:var(--mono);font-size:.5rem;font-weight:700;color:#a16207;flex-shrink:0;margin-right:.5rem">CYB</span></span><div><div class="ai-title">Penetration Testing and Ethical Hacking</div><div class="ai-meta">Cybrary</div></div></div>
-        <div class="ai-actions">
-          <button class="ico-btn" onclick="editItem('cert','c12')">Edit</button>
-          <button class="ico-btn del" onclick="delItem('certs','c12','aCertList','cert')">Del</button>
         </div>
       </div>
     </div></div>
@@ -3651,18 +3633,6 @@ nmap -sC -sV 10.10.10.x
                     "name": "BSCP — Burp Suite Certified Practitioner",
                     "issuer": "PortSwigger",
                     "status": "prog"
-                },
-                {
-                    "id": "c11",
-                    "name": "Linux 100: Fundamentals",
-                    "issuer": "TCM Security",
-                    "status": "done"
-                },
-                {
-                    "id": "c12",
-                    "name": "Penetration Testing and Ethical Hacking",
-                    "issuer": "Cybrary",
-                    "status": "done"
                 }
             ],
             "platforms": [
@@ -3727,7 +3697,7 @@ nmap -sC -sV 10.10.10.x
                 "footerR": "Fes, Morocco · Available globally"
             },
             "posts": [],
-            "_exported": 1780843469418
+            "_exported": 1780843475995
         }; // @@DEFAULTS_END@@
 
         // ============================================================
