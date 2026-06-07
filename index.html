@@ -2757,23 +2757,23 @@
 
 
                         <div class="admin-tabs">
-                <button class="atab" onclick="switchAdminTab('hero',this)">Hero / Profile</button>
+                <button class="atab act" onclick="switchAdminTab('hero',this)">Hero / Profile</button>
                 <button class="atab" onclick="switchAdminTab('about',this)">About</button>
                 <button class="atab" onclick="switchAdminTab('exp',this)">Experience</button>
                 <button class="atab" onclick="switchAdminTab('skills',this)">Skills</button>
                 <button class="atab" onclick="switchAdminTab('certs',this)">Certifications</button>
                 <button class="atab" onclick="switchAdminTab('plat',this)">Platforms</button>
                 <button class="atab" onclick="switchAdminTab('proj',this)">Projects</button>
-                <button class="atab act" onclick="switchAdminTab('contact',this)">Contact</button>
+                <button class="atab" onclick="switchAdminTab('contact',this)">Contact</button>
                 <button class="atab" onclick="switchAdminTab('blog',this)">Blog Posts</button>
                 <button class="atab" onclick="switchAdminTab('stats',this)" style="border-color:rgba(56,189,248,.35);color:var(--accent2)">Views &amp; Statistics</button>
                 <button class="atab" onclick="switchAdminTab('settings',this)">Settings</button>
             </div>
 
             <!-- HERO TAB -->
-            <div id="aHero" class="admin-section">
+            <div id="aHero" class="admin-section show">
                 <div class="section-title-row">
-                    <h3>Hero / Profile</h3><button class="add-btn" onclick="saveHeroAdmin()">Save Changes<span class="save-notice" id="heroSaved">✓ Saved</span></button></div>
+                    <h3>Hero / Profile</h3><button class="add-btn" onclick="saveHeroAdmin()">Save Changes<span class="save-notice show" id="heroSaved">✓ Saved</span></button></div>
                 <!-- Photo Upload -->
                 <div class="fr">
                     <label class="fl">Profile Photo</label>
@@ -3082,9 +3082,9 @@
             </div>
 
             <!-- CONTACT TAB -->
-            <div id="aContact" class="admin-section show">
+            <div id="aContact" class="admin-section">
                 <div class="section-title-row">
-                    <h3>Contact</h3><button class="add-btn" onclick="saveContactAdmin()">Save Changes<span class="save-notice show" id="contactSaved">✓ Saved</span></button></div>
+                    <h3>Contact</h3><button class="add-btn" onclick="saveContactAdmin()">Save Changes<span class="save-notice" id="contactSaved">✓ Saved</span></button></div>
                 <div class="fr"><label class="fl">Contact Sub-text</label><textarea class="ft" id="aContactSub" rows="3"></textarea></div>
                 <div class="fr"><label class="fl">Footer Left</label><input class="fi" id="aFooterL"></div>
                 <div class="fr"><label class="fl">Footer Right</label><input class="fi" id="aFooterR"></div>
@@ -3155,7 +3155,7 @@
                 <div style="margin-bottom:1.2rem">
                     <div style="font-family:var(--mono);font-size:.58rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Section</div>
                     <div style="display:flex;gap:.4rem;flex-wrap:wrap" id="statSectionTabs">
-                        <button class="satab act" onclick="switchStatSection('overview',this)">All Pages</button>
+                        <button class="satab" onclick="switchStatSection('overview',this)">All Pages</button>
                         <button class="satab" onclick="switchStatSection('about',this)">About</button>
                         <button class="satab" onclick="switchStatSection('experience',this)">Experience</button>
                         <button class="satab" onclick="switchStatSection('skills',this)">Skills</button>
@@ -3163,7 +3163,7 @@
                         <button class="satab" onclick="switchStatSection('platforms',this)">Platforms</button>
                         <button class="satab" onclick="switchStatSection('projects',this)">Projects</button>
                         <button class="satab" onclick="switchStatSection('contact',this)">Contact</button>
-                        <button class="satab" onclick="switchStatSection('blog',this)">Blog Posts</button>
+                        <button class="satab act" onclick="switchStatSection('blog',this)">Blog Posts</button>
                     </div>
                 </div>
 
@@ -3171,26 +3171,26 @@
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-bottom:1.4rem" id="statsKpiGrid">
                     <div class="stat-kpi-card" id="kpiToday">
                         <div class="stat-kpi-label">Today</div>
-                        <div class="stat-kpi-value" id="kpiTodayVal">—</div>
-                        <div class="stat-kpi-trend" id="kpiTodayTrend"></div>
+                        <div class="stat-kpi-value" id="kpiTodayVal">2</div>
+                        <div class="stat-kpi-trend up" id="kpiTodayTrend">↑ New</div>
                         <div class="stat-kpi-sub" id="kpiTodaySub">vs yesterday</div>
                     </div>
                     <div class="stat-kpi-card" id="kpiWeek">
                         <div class="stat-kpi-label">This Week</div>
-                        <div class="stat-kpi-value" id="kpiWeekVal">—</div>
-                        <div class="stat-kpi-trend" id="kpiWeekTrend"></div>
+                        <div class="stat-kpi-value" id="kpiWeekVal">2</div>
+                        <div class="stat-kpi-trend up" id="kpiWeekTrend">▲ +100%</div>
                         <div class="stat-kpi-sub" id="kpiWeekSub">vs last week</div>
                     </div>
                     <div class="stat-kpi-card" id="kpiMonth">
                         <div class="stat-kpi-label">This Month</div>
-                        <div class="stat-kpi-value" id="kpiMonthVal">—</div>
-                        <div class="stat-kpi-trend" id="kpiMonthTrend"></div>
+                        <div class="stat-kpi-value" id="kpiMonthVal">2</div>
+                        <div class="stat-kpi-trend up" id="kpiMonthTrend">▲ +100%</div>
                         <div class="stat-kpi-sub" id="kpiMonthSub">vs last month</div>
                     </div>
                     <div class="stat-kpi-card" id="kpiYear">
                         <div class="stat-kpi-label">This Year</div>
-                        <div class="stat-kpi-value" id="kpiYearVal">—</div>
-                        <div class="stat-kpi-trend" id="kpiYearTrend"></div>
+                        <div class="stat-kpi-value" id="kpiYearVal">3</div>
+                        <div class="stat-kpi-trend up" id="kpiYearTrend">↑ New</div>
                         <div class="stat-kpi-sub" id="kpiYearSub">vs last year</div>
                     </div>
                 </div>
@@ -3198,7 +3198,7 @@
                 <!-- Chart -->
                 <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.2rem;margin-bottom:1rem">
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem">
-                        <span id="statsChartTitle" style="font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">Daily Views — Last 30 Days</span>
+                        <span id="statsChartTitle" style="font-family:var(--mono);font-size:.62rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">Blog Posts · Daily — Last 30 Days</span>
                         <div style="display:flex;gap:.4rem;flex-wrap:wrap">
                             <div style="display:flex;gap:.3rem" id="statsViewTabs">
                                 <button class="sptab act" onclick="switchStatsView('daily',this)">Daily</button>
@@ -3212,8 +3212,8 @@
                             </div>
                         </div>
                     </div>
-                    <canvas id="statsChart" height="180"></canvas>
-                    <div id="statsChartEmpty" style="display:none;text-align:center;padding:2.5rem;font-family:var(--mono);font-size:.72rem;color:var(--muted)">No data yet for this section &amp; period.</div>
+                    <canvas id="statsChart" height="1048" style="display: block; box-sizing: border-box; height: 838px; width: 1397px;" width="1747"></canvas>
+                    <div id="statsChartEmpty" style="display: none; text-align: center; padding: 2.5rem; font-family: var(--mono); font-size: 0.72rem; color: var(--muted);">No data yet for this section &amp; period.</div>
                 </div>
 
                 <!-- Clear Buttons -->
@@ -3794,7 +3794,7 @@ nmap -sC -sV 10.10.10.x
                 "footerR": "Fes, Morocco"
             },
             "posts": [],
-            "_exported": 1780846351100
+            "_exported": 1780846399344
         }; // @@DEFAULTS_END@@
 
         // ============================================================
