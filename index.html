@@ -2762,9 +2762,9 @@
                 <button class="atab" onclick="switchAdminTab('exp',this)">Experience</button>
                 <button class="atab" onclick="switchAdminTab('skills',this)">Skills</button>
                 <button class="atab" onclick="switchAdminTab('certs',this)">Certifications</button>
-                <button class="atab act" onclick="switchAdminTab('plat',this)">Platforms</button>
+                <button class="atab" onclick="switchAdminTab('plat',this)">Platforms</button>
                 <button class="atab" onclick="switchAdminTab('proj',this)">Projects</button>
-                <button class="atab" onclick="switchAdminTab('contact',this)">Contact</button>
+                <button class="atab act" onclick="switchAdminTab('contact',this)">Contact</button>
                 <button class="atab" onclick="switchAdminTab('blog',this)">Blog Posts</button>
                 <button class="atab" onclick="switchAdminTab('stats',this)" style="border-color:rgba(56,189,248,.35);color:var(--accent2)">Views &amp; Statistics</button>
                 <button class="atab" onclick="switchAdminTab('settings',this)">Settings</button>
@@ -3005,7 +3005,7 @@
             </div>
 
             <!-- PLATFORMS TAB -->
-            <div id="aPlat" class="admin-section show">
+            <div id="aPlat" class="admin-section">
                 <div class="section-title-row">
                     <h3>Platforms</h3><button class="add-btn" onclick="openPlatModal()">+ Add Platform</button></div>
                 <div class="admin-items" id="aPlatList">
@@ -3042,13 +3042,49 @@
             <div id="aProj" class="admin-section">
                 <div class="section-title-row">
                     <h3>Projects</h3><button class="add-btn" onclick="openProjModal()">+ Add Project</button></div>
-                <div class="admin-items" id="aProjList"></div>
+                <div class="admin-items" id="aProjList">
+    <div class="admin-item">
+      <div class="ai-header">
+        <div style="display:flex;align-items:center"><span style="display:contents"></span><div><div class="ai-title">Nmap Automation Tool</div><div class="ai-meta">Python · 2022–2023</div></div></div>
+        <div class="ai-actions">
+          <button class="ico-btn" onclick="editItem('proj','pr1')">Edit</button>
+          <button class="ico-btn del" onclick="delItem('projects','pr1','aProjList','proj')">Del</button>
+        </div>
+      </div>
+    </div>
+    <div class="admin-item">
+      <div class="ai-header">
+        <div style="display:flex;align-items:center"><span style="display:contents"></span><div><div class="ai-title">Encryption &amp; Decryption GUI Tool</div><div class="ai-meta">Python · Tkinter · 2022–2023</div></div></div>
+        <div class="ai-actions">
+          <button class="ico-btn" onclick="editItem('proj','pr2')">Edit</button>
+          <button class="ico-btn del" onclick="delItem('projects','pr2','aProjList','proj')">Del</button>
+        </div>
+      </div>
+    </div>
+    <div class="admin-item">
+      <div class="ai-header">
+        <div style="display:flex;align-items:center"><span style="display:contents"></span><div><div class="ai-title">Pro Labs Write-ups</div><div class="ai-meta">HTB Pro Labs · Active Research</div></div></div>
+        <div class="ai-actions">
+          <button class="ico-btn" onclick="editItem('proj','pr3')">Edit</button>
+          <button class="ico-btn del" onclick="delItem('projects','pr3','aProjList','proj')">Del</button>
+        </div>
+      </div>
+    </div>
+    <div class="admin-item">
+      <div class="ai-header">
+        <div style="display:flex;align-items:center"><span style="display:contents"></span><div><div class="ai-title">CTF Challenge Write-ups</div><div class="ai-meta">HTB · THM · Various · Ongoing</div></div></div>
+        <div class="ai-actions">
+          <button class="ico-btn" onclick="editItem('proj','pr4')">Edit</button>
+          <button class="ico-btn del" onclick="delItem('projects','pr4','aProjList','proj')">Del</button>
+        </div>
+      </div>
+    </div></div>
             </div>
 
             <!-- CONTACT TAB -->
-            <div id="aContact" class="admin-section">
+            <div id="aContact" class="admin-section show">
                 <div class="section-title-row">
-                    <h3>Contact</h3><button class="add-btn" onclick="saveContactAdmin()">Save Changes<span class="save-notice" id="contactSaved">✓ Saved</span></button></div>
+                    <h3>Contact</h3><button class="add-btn" onclick="saveContactAdmin()">Save Changes<span class="save-notice show" id="contactSaved">✓ Saved</span></button></div>
                 <div class="fr"><label class="fl">Contact Sub-text</label><textarea class="ft" id="aContactSub" rows="3"></textarea></div>
                 <div class="fr"><label class="fl">Footer Left</label><input class="fi" id="aFooterL"></div>
                 <div class="fr"><label class="fl">Footer Right</label><input class="fi" id="aFooterR"></div>
@@ -3753,12 +3789,12 @@ nmap -sC -sV 10.10.10.x
                 }
             ],
             "contact": {
-                "sub": "Open to penetration testing engagements, red team operations, security consulting, and full-time roles. Based in Fes, Morocco — available for remote engagements globally.",
+                "sub": "Open to penetration testing engagements, red team operations, security consulting, and full-time roles. Based in Fes, Morocco",
                 "footerL": "© 2026 Amine Ziani — Offensive Security Consultant",
-                "footerR": "Fes, Morocco · Available globally"
+                "footerR": "Fes, Morocco"
             },
             "posts": [],
-            "_exported": 1780846320812
+            "_exported": 1780846351100
         }; // @@DEFAULTS_END@@
 
         // ============================================================
