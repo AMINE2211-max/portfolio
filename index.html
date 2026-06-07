@@ -2749,7 +2749,7 @@
                 <h2>Admin Dashboard</h2>
                 <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
                     <span id="fbStatusBadge" class="fb-status ok">● Firebase Connected</span>
-                    <button class="btn btn-g" id="ghPushHeaderBtn" onclick="pushToGitHub(true)" style="display: inline-flex;" disabled="">⏳ Pushing...</button>
+                    <button class="btn btn-g" id="ghPushHeaderBtn" onclick="pushToGitHub(true)" style="display: inline-flex;">⏳ Pushing...</button>
                     <button class="btn btn-o" onclick="goHome()">← View Site</button>
                     <button class="btn btn-o" onclick="doLogout()">Logout</button>
                 </div>
@@ -2757,8 +2757,8 @@
 
 
                         <div class="admin-tabs">
-                <button class="atab act" onclick="switchAdminTab('hero',this)">Hero / Profile</button>
-                <button class="atab" onclick="switchAdminTab('about',this)">About</button>
+                <button class="atab" onclick="switchAdminTab('hero',this)">Hero / Profile</button>
+                <button class="atab act" onclick="switchAdminTab('about',this)">About</button>
                 <button class="atab" onclick="switchAdminTab('exp',this)">Experience</button>
                 <button class="atab" onclick="switchAdminTab('skills',this)">Skills</button>
                 <button class="atab" onclick="switchAdminTab('certs',this)">Certifications</button>
@@ -2771,9 +2771,9 @@
             </div>
 
             <!-- HERO TAB -->
-            <div id="aHero" class="admin-section show">
+            <div id="aHero" class="admin-section">
                 <div class="section-title-row">
-                    <h3>Hero / Profile</h3><button class="add-btn" onclick="saveHeroAdmin()">Save Changes<span class="save-notice show" id="heroSaved">✓ Saved</span></button></div>
+                    <h3>Hero / Profile</h3><button class="add-btn" onclick="saveHeroAdmin()">Save Changes<span class="save-notice" id="heroSaved">✓ Saved</span></button></div>
                 <!-- Photo Upload -->
                 <div class="fr">
                     <label class="fl">Profile Photo</label>
@@ -2809,9 +2809,9 @@
             </div>
 
             <!-- ABOUT TAB -->
-            <div id="aAbout" class="admin-section">
+            <div id="aAbout" class="admin-section show">
                 <div class="section-title-row">
-                    <h3>About Me</h3><button class="add-btn" onclick="saveAboutAdmin()">Save Changes<span class="save-notice" id="aboutSaved">✓ Saved</span></button></div>
+                    <h3>About Me</h3><button class="add-btn" onclick="saveAboutAdmin()">Save Changes<span class="save-notice show" id="aboutSaved">✓ Saved</span></button></div>
                 <div class="fr"><label class="fl">About Text (use &lt;p&gt; tags for paragraphs)</label><textarea class="ft" id="aAboutText" rows="8"></textarea></div>
                 <div class="fr"><label class="fl">Location</label><input class="fi" id="aLoc"></div>
                 <div class="fr"><label class="fl">Email</label><input class="fi" id="aEmail"></div>
@@ -3578,7 +3578,7 @@ nmap -sC -sV 10.10.10.x
             },
             "about": {
                 "text": "<p>I am an offensive security consultant and certified penetration tester based in Fes, Morocco. With over five years of hands-on experience across red teaming, Active Directory exploitation, and web application security, I specialize in identifying and exploiting complex vulnerabilities in enterprise environments.</p><p>Holding certifications from Hack The Box, INE Security, Altered Security, Zero Point Security, and Cyber Warfare Labs, I bring both theoretical depth and practical expertise to every engagement. My methodology aligns with industry frameworks including MITRE ATT&CK, enabling structured, high-fidelity adversary simulation.</p><p>Currently pursuing an engineering degree in cybersecurity at SUP MTI Rabat, I remain committed to continuous learning and pushing the boundaries of offensive security research.</p>",
-                "location": "Fes, Morocco — Available globally",
+                "location": "Fes, Morocco ",
                 "email": "ziani3618@gmail.com",
                 "phone": "+212 658 715 489",
                 "linkedin": "https://linkedin.com/in/amine-ziani-828886278",
@@ -3794,7 +3794,7 @@ nmap -sC -sV 10.10.10.x
                 "footerR": "Fes, Morocco"
             },
             "posts": [],
-            "_exported": 1780846399728
+            "_exported": 1780846408328
         }; // @@DEFAULTS_END@@
 
         // ============================================================
