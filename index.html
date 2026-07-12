@@ -2900,7 +2900,7 @@ for f in sorted(Path('.').glob('*.enc')):
                 <h2>Admin Dashboard</h2>
                 <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
                     <span id="fbStatusBadge" class="fb-status ok">● Firebase Connected</span>
-                    <button class="btn btn-g" id="ghPushHeaderBtn" onclick="pushToGitHub(true)" style="display: inline-flex;" disabled="">⏳ Pushing...</button>
+                    <button class="btn btn-g" id="ghPushHeaderBtn" onclick="pushToGitHub(true)" style="display: inline-flex;">⏳ Pushing...</button>
                     <button class="btn btn-o" onclick="goHome()">← View Site</button>
                     <button class="btn btn-o" onclick="doLogout()">Logout</button>
                 </div>
@@ -3196,16 +3196,6 @@ for f in sorted(Path('.').glob('*.enc')):
           <button class="ico-btn del" onclick="delPost('mrh3e35objlj6c8zaid')">Del</button>
         </div>
       </div>
-    </div>
-    <div class="admin-item">
-      <div class="ai-header">
-        <div><div class="ai-title">Guardian</div><div class="ai-meta">HTB · 08 Jun 2026 · <span style="color:var(--muted)">○ Draft (hidden)</span></div></div>
-        <div class="ai-actions">
-          <button class="ico-btn" onclick="togglePublish('mq56cnofb2b5sv5lza4')" style="border-color:rgba(0,232,122,.4);color:var(--accent)" title="Click to publish (show to visitors)">Publish</button>
-          <button class="ico-btn" onclick="adminEditPost('mq56cnofb2b5sv5lza4')">Edit</button>
-          <button class="ico-btn del" onclick="delPost('mq56cnofb2b5sv5lza4')">Del</button>
-        </div>
-      </div>
     </div></div>
             </div>
 
@@ -3431,7 +3421,7 @@ for f in sorted(Path('.').glob('*.enc')):
     </div>
 
     <!-- Blog Post Editor -->
-    <div class="overlay open" id="postModal">
+    <div class="overlay" id="postModal">
         <div class="modal">
             <button class="modal-close" onclick="closeModal('postModal')">✕</button>
             <div class="modal-label" id="postModalLabel">[ EDIT_WRITEUP ]</div>
@@ -3876,20 +3866,9 @@ nmap -sC -sV 10.10.10.x
                     "date": "2026-07-12T01:05:54.300Z",
                     "published": false,
                     "icon": ""
-                },
-                {
-                    "id": "mq56cnofb2b5sv5lza4",
-                    "title": "Guardian",
-                    "category": "HTB",
-                    "tags": "linux",
-                    "excerpt": "",
-                    "content": "",
-                    "date": "2026-06-08T12:15:49.983Z",
-                    "published": false,
-                    "icon": ""
                 }
             ],
-            "_exported": 1783818454898
+            "_exported": 1783818461872
         }; // @@DEFAULTS_END@@
 
         // ============================================================
